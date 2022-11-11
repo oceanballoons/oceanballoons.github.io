@@ -1,5 +1,5 @@
 ///
-/// Paradigm Shift by Pixelarity
+/// Standout by Pixelarity
 /// pixelarity.com | hello@pixelarity.com
 /// License: pixelarity.com/license
 ///
@@ -13,26 +13,15 @@
 
 		li {
 			display: inline-block;
+			padding: 0 1rem 0 0;
 
 			&:last-child {
 				padding-right: 0;
 			}
 
 			.icon {
-				@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
-				width: 2.25rem;
-				height: 2.25rem;
-				text-align: center;
-				line-height: 2.25rem;
-				border-radius: 2.25rem;
-				display: inline-block;
-
 				&:before {
-					font-size: 1.25rem;
-				}
-
-				&:hover {
-					background-color: _palette(border-bg);
+					font-size: 1.5rem;
 				}
 			}
 		}
