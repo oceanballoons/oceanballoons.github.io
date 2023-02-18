@@ -4,11 +4,12 @@
 @import 'libs/vendor';
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
+@import 'libs/fixed-grid';
 @import 'fontawesome-all.min.css';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,700,300');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Oswald:600');
 
 /*
-	Archetype by Pixelarity
+	Standout by Pixelarity
 	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
@@ -20,7 +21,8 @@
 		large:    ( 981px,   1280px ),
 		medium:   ( 737px,   980px  ),
 		small:    ( 481px,   736px  ),
-		xsmall:   ( null,    480px  )
+		xsmall:   ( 361px,   480px  ),
+		xxsmall:  ( null,    360px  )
 	));
 
 // Mixins.
@@ -33,45 +35,20 @@
 		@include color-list($p);
 		@include color-section($p);
 		@include color-table($p);
+		@include color-contact-icons($p);
+		@include color-split($p);
+		@include color-tabs($p);
 	}
 
-	@mixin banner-bg($image, $overlay: false) {
-		$background-image: (
-			'url("images/overlay.png")',
-			'linear-gradient(45deg, #{transparentize(_palette(gradient1), 0.35)}, #{transparentize(_palette(gradient2), 0.35)})',
-			'url("#{$image}")'
-		);
-
-		$background-size: (
-			auto,
-			cover,
-			cover
-		);
-
-		$background-attachment: (
-			fixed,
-			fixed,
-			fixed
-		);
-
-		$background-repeat: (
-			repeat,
-			no-repeat,
-			no-repeat
-		);
-
-		@if $overlay {
-			$background-image: join(('linear-gradient(top, #{_palette(accent4, bg)}, #{_palette(accent4, bg)})'), $background-image);
-			$background-size: join((auto), $background-size);
-			$background-attachment: join((fixed), $background-attachment);
-			$background-repeat: join((repeat), $background-repeat);
-		}
-
-		@include vendor('background-image', $background-image);
-		background-position: center center;
-		background-size: $background-size;
-		background-attachment: $background-attachment;
-		background-repeat: $background-repeat;
+	@mixin sr-only {
+		border: 0;
+		clip: rect(0,0,0,0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
 	}
 
 // Base.
@@ -90,16 +67,19 @@
 	@import 'components/image';
 	@import 'components/list';
 	@import 'components/actions';
+	@import 'components/tabs';
 	@import 'components/icons';
-	@import 'components/features';
-	@import 'components/posts';
+	@import 'components/contact-icons';
 	@import 'components/section';
 	@import 'components/table';
 	@import 'components/wrapper';
+	@import 'components/gallery';
+	@import 'components/split';
 
 // Layout.
 
 	@import 'layout/header';
+	@import 'layout/menu';
 	@import 'layout/banner';
+	@import 'layout/main';
 	@import 'layout/footer';
-	@import 'layout/navPanel';
