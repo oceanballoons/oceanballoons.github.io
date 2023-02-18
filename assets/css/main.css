@@ -4226,17 +4226,17 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/banner.jpg");
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/banner.jpg");
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/banner.jpg");
-		background-image: url("images/overlay.png"), linear-gradient(45deg, rgba(39, 161, 227, 0.65), rgba(231, 35, 42, 0.65)), url("../../images/banner.jpg");
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, rgba(39, 161, 227, 0.15), rgba(231, 35, 42, 0.15)), url("../../images/banner.jpg");
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, rgba(39, 161, 227, 0.15), rgba(231, 35, 42, 0.15)), url("../../images/banner.jpg");
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, rgba(39, 161, 227, 0.15), rgba(231, 35, 42, 0.15)), url("../../images/banner.jpg");
+		background-image: url("images/overlay.png"), linear-gradient(45deg, rgba(39, 161, 227, 0.15), rgba(231, 35, 42, 0.15)), url("../../images/banner.jpg");
 		background-position: center center;
 		background-size: auto, cover, cover;
 		background-attachment: fixed, fixed, fixed;
 		background-repeat: repeat, no-repeat, no-repeat;
 		position: relative;
-		min-height: 70vh;
-		height: 35em;
+		min-height: 90vh;
+		height: 45em;
 	}
 
 		#banner .content {
