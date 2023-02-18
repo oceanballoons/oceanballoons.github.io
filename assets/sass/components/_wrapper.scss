@@ -1,107 +1,177 @@
 ///
-/// Standout by Pixelarity
+/// Archetype by Pixelarity
 /// pixelarity.com | hello@pixelarity.com
 /// License: pixelarity.com/license
 ///
 
 /* Wrapper */
 
-	/// Sets the colors of the wrapper's top/bottom edges.
-	/// @param {string} $color Color.
-	@mixin wrapper-edges-color($color: black) {
-		&:before, &:after {
-			background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 0,100 100,100" style="fill:#{$color};" /></svg>');
-			z-index: 2;
-		}
-	}
-
 	.wrapper {
-		@include wrapper-edges-color(_palette(bg));
-		padding: 10rem 0 12rem 0;
+		@include padding(6.5em, 0);
 		position: relative;
 
 		> .inner {
 			margin: 0 auto;
-			max-width: 65rem;
-			width: calc(100% - 4rem);
+			width: 70em;
 		}
 
-		&:before, &:after {
-			background-repeat: no-repeat;
-			background-size: 100% 100%;
-			height: 6rem;
-			left: 0;
-			position: absolute;
-			width: 100%;
-		}
-
-		&:before {
-			@include vendor('transform', 'translateY(-100%) scale(-1, 1)');
-			content: '';
-			top: 0;
-		}
-
-		&.alt {
-			padding-bottom: 1rem;
-
-			&:after {
-				@include vendor('transform', 'translateY(100%) rotate(180deg)');
-				bottom: 0;
-				content: '';
-			}
+		&.style1 {
+			@include color(accent1);
 		}
 
 		&.style2 {
-			@include wrapper-edges-color(_palette(bg-alt));
-			background: _palette(bg-alt);
+			@include color(accent2);
 		}
 
-		@include breakpoint('<=xlarge') {
-			padding: 8rem 0 10rem 0;
+		&.style3 {
+			@include color(accent3);
+		}
+
+		&.style4 {
+			@include color(accent4);
+		}
+
+		&.cta {
+			@include banner-bg('../../images/cta.jpg', true);
+			@include color-typography(accent4);
+			@include color-button(accent4);
+
+			> .inner {
+				@include vendor('display', 'flex');
+
+				> * {
+					padding-left: (_size(element-margin) * 0.75);
+					-ms-flex: auto;
+					width: 50%;
+				}
+
+				> :first-child {
+					padding-left: 0;
+					width: 50%;
+				}
+			}
+
+			body.is-mobile & {
+				background-attachment: scroll;
+			}
+
+			@include breakpoint('<=medium') {
+				> .inner {
+					> * {
+						width: 100% !important;
+						padding-left: 0 !important;
+					}
+				}
+			}
+		}
+
+		&.sidebar {
+			> .inner {
+				@include vendor('display', 'flex');
+				@include vendor('flex-wrap', 'wrap');
+
+				> header {
+					width: 100%;
+				}
+
+				> .content {
+					width: 75%;
+					padding: 0 (_size(element-margin) * 2) 0 0;
+				}
+
+				> .sidebar {
+					width: 25%;
+				}
+			}
+
+			&.right {
+			}
+
+			&.left {
+				> .inner {
+					@include vendor('flex-direction', 'row-reverse');
+
+					> .content {
+						padding: 0 0 0 (_size(element-margin) * 2);
+					}
+				}
+			}
+
+			@include breakpoint('<=medium') {
+				> .inner {
+					@include vendor('flex-direction', 'row');
+
+					> .content {
+						width: 100%;
+						padding: 0;
+					}
+
+					> .sidebar {
+						border-top: solid (_size(border-width) * 2) _palette(border);
+						margin: _size(element-margin) 0 0 0;
+						padding: (_size(element-margin) * 2) 0 0 0;
+						width: 100%;
+					}
+				}
+
+				&.style1 {
+					> .inner {
+						> .sidebar {
+							border-top-color: _palette(accent1, border);
+						}
+					}
+				}
+
+				&.style2 {
+					> .inner {
+						> .sidebar {
+							border-top-color: _palette(accent2, border);
+						}
+					}
+				}
+
+				&.style3 {
+					> .inner {
+						> .sidebar {
+							border-top-color: _palette(accent3, border);
+						}
+					}
+				}
+
+				&.style4 {
+					> .inner {
+						> .sidebar {
+							border-top-color: _palette(accent4, border);
+						}
+					}
+				}
+			}
 		}
 
 		@include breakpoint('<=large') {
-			padding: 6rem 0 8rem 0;
-
-			&:before, &:after {
-				height: 4rem;
-			}
+			@include padding(5em, 3em);
 
 			> .inner {
-				max-width: 75rem;
-				width: calc(100% - 8rem);
+				width: _size(inner-width, large);
 			}
 		}
 
 		@include breakpoint('<=medium') {
-			padding: 4rem 0 6rem 0;
+			> .inner {
+				@include vendor('flex-direction', 'column');
 
-			&:before, &:after {
-				height: 3rem;
+				> * {
+					padding-left: 0 !important;
+					width: 100%;
+				}
 			}
 		}
 
 		@include breakpoint('<=small') {
-			padding: 4rem 0 6rem 0;
-
-			> .inner {
-				width: calc(100% - 6rem);
-			}
-
-			&:before, &:after {
-				height: 2rem;
-			}
-
-			&.alt {
-				padding-bottom: 0;
-			}
+			@include padding(2.5em, 2em);
 		}
 
 		@include breakpoint('<=xsmall') {
-			padding: 3rem 0 3rem 0;
-
-			> .inner {
-				width: calc(100% - 4rem);
-			}
+			@include padding(2.5em, 1.5em);
 		}
 	}
