@@ -1856,10 +1856,10 @@ input, select, textarea {
 	}
 
 
-/* Box */
+/* Box1 */
 
 .box1 {
-	width: 22%;
+	width: 24%;
 	border: solid 2px;
 	border-radius: 10px;
 	margin-bottom: 2rem;
@@ -1879,6 +1879,32 @@ input, select, textarea {
 .box1 {
 	border-color: rgba(99, 116, 133, 0.25);
 }
+
+/* Box2 */
+
+.box2 {
+	width: 31%;
+	border: solid 2px;
+	border-radius: 10px;
+	margin-bottom: 2rem;
+	padding: 1.5rem;
+}
+
+	.box2 > :last-child {
+		margin-bottom: 0;
+	}
+
+	.box2.alt {
+		border: 0;
+		border-radius: 0;
+		padding: 0;
+	}
+
+.box2 {
+	border-color: rgba(99, 116, 133, 0.25);
+}
+
+
 
 /* Gallery */
 
