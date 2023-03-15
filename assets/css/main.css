@@ -4389,8 +4389,8 @@ input, select, textarea {
 		color: #ffffff;
 		display: flex;
 		justify-content: center;
-		min-height: 40rem;
-		min-height: 95vh;
+		min-height: 30rem;
+		min-height: 50vh;
 		position: relative;
 		width: 100%;
 	}
