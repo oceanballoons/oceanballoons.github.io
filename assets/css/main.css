@@ -1975,7 +1975,7 @@ input, select, textarea {
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
-	margin: -1.25rem 0 0 -1.25rem;
+	margin: 1.25rem 0 0 1.25rem;
 	width: calc(100% + 1.25rem);
 }
 
@@ -1984,7 +1984,7 @@ input, select, textarea {
 		display: block;
 		margin: 1.25rem 0 0 1.25rem;
 		outline: 0;
-		position: relative;
+		position: centre;
 		width: calc(50% - 1.25rem);
 	}
 
