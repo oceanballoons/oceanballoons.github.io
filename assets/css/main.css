@@ -3345,7 +3345,7 @@ input, select, textarea {
 			}
 
 		.gallery a.portrait img {
-			height: 80vw;
+			height: 50vw;
 		}
 
 	.gallery .modal {
@@ -3517,7 +3517,7 @@ input, select, textarea {
 				}
 
 				.gallery a.portrait img {
-					height: 30rem;
+					height: 20rem;
 				}
 
 	}
@@ -3534,7 +3534,7 @@ input, select, textarea {
 		}
 
 		.gallery a.portrait img {
-			height: 34rem;
+			height: 12rem;
 		}
 
 	}
