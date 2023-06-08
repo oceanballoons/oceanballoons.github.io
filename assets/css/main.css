@@ -3341,11 +3341,11 @@ input, select, textarea {
 		}
 
 			.gallery a.landscape img {
-				height: 35vw;
+				height: 40vw;
 			}
 
 		.gallery a.portrait img {
-			height: 70vw;
+			height: 54vw;
 		}
 
 	.gallery .modal {
