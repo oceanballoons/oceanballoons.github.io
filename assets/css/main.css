@@ -3341,11 +3341,11 @@ input, select, textarea {
 		}
 
 			.gallery a.landscape img {
-				height: 30vw;
+				height: 35vw;
 			}
 
 		.gallery a.portrait img {
-			height: 30vw;
+			height: 70vw;
 		}
 
 	.gallery .modal {
@@ -3534,7 +3534,7 @@ input, select, textarea {
 		}
 
 		.gallery a.portrait img {
-			height: 14rem;
+			height: 34rem;
 		}
 
 	}
