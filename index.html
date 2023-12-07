@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
+	<!-- Added default theme = dark theme (Alfred)-->
+	<html lang="en" data-theme="light">
 	<head>
 		<meta charset="utf-8" />
-		<title>Dashboard</title>
+		<title>Clinic Checklist Dashboard</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link href="output.css" rel="stylesheet" />
 		<!-- chart library -->
@@ -14,6 +16,23 @@
 		<script
 			src="https://cdn.jsdelivr.net/npm/external-svg-loader@1.6.10/svg-loader.min.js"
 			async></script>
+		<!-- theme switcher script (Alfred)-->
+		<script>
+			function toggleTheme() {
+				const html = document.documentElement;
+				const logo = document.getElementById('logo');
+		
+				if (html.getAttribute('data-theme') === 'dark') {
+					html.setAttribute('data-theme', 'light');
+					logo.src = 'images/logo/clinic_checklist_logo.png'; // Light theme logo
+				} else {
+					html.setAttribute('data-theme', 'dark');
+					logo.src = 'images/logo/clinic_checklist_logo_dark.png'; // Dark theme logo
+				}
+			}
+		</script>
+		
+		  
 	</head>
 	<!-- drawer -->
 	<body class="drawer min-h-screen bg-base-200 lg:drawer-open">
@@ -27,8 +46,15 @@
 						<svg data-src="https://unpkg.com/heroicons/20/solid/bars-3.svg" class="h-5 w-5"></svg>
 					</label>
 					<div class="grow">
-						<h1 class="lg:text-2xl lg:font-light">Dashboard</h1>
+						<img id="logo" src="images/logo/clinic_checklist_logo.png" alt="Clinic Checklist Logo" style="width: 250px;">
 					</div>
+					
+					<!-- theme switcher script (Alfred)-->
+					<label for="theme-switcher" class="flex items-center gap-2" style="font-size: .7rem;"">
+						Dark Mode
+						<input id="theme-switcher" type="checkbox" onchange="toggleTheme()" class="toggle toggle-sm" />
+					  </label>
+					  
 					<div>
 						<input
 							type="text"
@@ -372,7 +398,8 @@
 					</div>
 					<svg
 						data-src="https://unpkg.com/@svg-maps/world@1.0.1/world.svg"
-						class="m-4 fill-base-content/80" />
+						class="m-4 fill-base-content/80">
+					</svg>
 				</section>
 				<!-- /card -->
 				<!-- card -->
@@ -999,8 +1026,8 @@
 						viewBox="0 0 1024 1024"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg">
-						<rect x="256" y="670.72" width="512" height="256" rx="128" class="fill-base-content" />
-						<circle cx="512" cy="353.28" r="256" class="fill-base-content" />
+						< x="256" y="670.72" width="512" height="256" rx="128" class="fill-base-content" />
+						<circle cx="512" cy="512" r="256" class="fill-base-content" />
 						<circle
 							cx="512"
 							cy="353.28"
@@ -1008,9 +1035,8 @@
 							stroke="black"
 							stroke-opacity="0.2"
 							stroke-width="10" />
-						<circle cx="512" cy="353.28" r="114.688" class="fill-base-100" />
 					</svg>
-					Daisy Corp
+					Menu
 				</div>
 				<ul class="menu">
 					<li>
