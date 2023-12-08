@@ -48,6 +48,70 @@
 			html {
 				font-size: 18px
 			}
+
+		/*-- Radio Buttons */
+			.square-radio {
+				width: 30px;
+				height: 30px;
+				border-radius: 5px; /* Rounded corners */
+			}
+
+		/*-- /Radio Buttons */
+			
+		
+		.action-link {
+				text-decoration: none;
+				color: rgb(7, 27, 251);
+			}
+
+			.action-link:hover {
+				cursor: pointer;
+				text-decoration: underline;
+			}
+
+			.table-menu-bar {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 10px;
+			}
+
+			/* Style menu bar buttons */
+	
+			.table-menu-bar button {
+			}
+
+			.table-menu-bar {
+				display: flex;
+				justify-content: start;
+				gap: 10px;
+				margin-bottom: 20px;
+				background-color: #808080; /* Blue color */
+  				border: none;
+  				border-radius: 5px;
+  				padding: 5px 20px;
+  				font-size: 16px;
+				font-weight: 400;
+				cursor: pointer;
+  				transition: background-color 0.3s ease;
+				}
+
+			.table-menu-bar button {
+				background-color: #f5f5f5; /* Blue color */
+				color: rgb(0, 0, 0);
+				border: none;
+				border-radius: 5px;
+				padding: 3px 20px;
+				font-size: 16px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+				}
+
+			.table-menu-bar button:hover {
+			background-color: #c9c9c9; /* Darker blue on hover */
+			}
+
+			/* /Style menu bar buttons */
+
 		</style>
 		
 		<!-- chart library -->
@@ -269,25 +333,36 @@
 						</h2>
 					</div>
 					<div class="overflow-x-auto">
+						<div class="table-menu-bar">
+							<button>Edit</button>
+							<button>Add</button>
+							<button>Delete</button>
+						</div>	
+
 						<table class="table table-zebra">
 							<thead>
 								<tr style="background-color: #E2E8F0;">
+									<th style="padding: 0.5rem;">Select</th>
 									<th style="padding: 0.5rem;">Status</th>
+									<th style="padding: 0.5rem;">Form Name</th>
 									<th style="padding: 0.5rem;">Name</th>
 									<th style="padding: 0.5rem;">Date</th>
 									<th style="padding: 0.5rem;">Amount</th>
 									<th style="padding: 0.5rem;">Test1</th>
 									<th style="padding: 0.5rem;">Test2</th>
+									<th style="padding: 0.5rem;">Submissions</th>
 								</tr>
 							</thead>
 							<tbody>
-								<!-- Example row -->
+								<!-- Data Row -->								
 								<tr style="background-color: #cef2d9;">
+									<td>
+										<input type="radio" class="square-radio" />
+									</td>
 									<td style="padding: 0.5rem;">
-										<!-- Status Tag -->
 										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #38A169; border-radius: 9999px; font-weight: bold;">COMPLETE</span>
 									</td>
-									<td style="padding: 0.5rem;">Cy Ganderton</td>
+									<td style="padding: 0.5rem;">Cy Ganderton Longer name longer longer</td>
 									<td style="padding: 0.5rem;">Feb 2nd</td>
 									<td style="padding: 0.5rem;">
 										<!-- Amount with Black Icon -->
@@ -296,10 +371,15 @@
 									</td>
 									<td style="padding: 0.5rem;">Feb 2nd</td>
 									<td style="padding: 0.5rem;">Feb 2nd</td>
+									<td>
+										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
+									</td>
 								</tr>
 								<tr style="background-color: #f0e4cb;">
+									<td>
+										<input type="radio" class="square-radio" />
+									</td>
 									<td style="padding: 0.5rem;">
-										<!-- Status Tag -->
 										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #D69E2E; border-radius: 9999px; font-weight: bold;">PRIORITY</span>
 									</td>
 									<td style="padding: 0.5rem;">Cy Ganderton</td>
@@ -311,10 +391,15 @@
 									</td>
 									<td style="padding: 0.5rem;">Feb 2nd</td>
 									<td style="padding: 0.5rem;">Feb 2nd</td>
+									<td>
+										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
+									</td>
 								</tr>
 								<tr style="background-color: #eac2c2;">
+									<td>
+										<input type="radio" class="square-radio" />
+									</td>
 									<td style="padding: 0.5rem;">
-										<!-- Status Tag -->
 										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #C53030; border-radius: 9999px; font-weight: bold;">URGENT</span>
 									</td>
 									<td style="padding: 0.5rem;">Cy Ganderton</td>
@@ -326,10 +411,15 @@
 									</td>
 									<td style="padding: 0.5rem;">Feb 2nd</td>
 									<td style="padding: 0.5rem;">Feb 2nd</td>
+									<td>
+										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
+									</td>
 								</tr>
 								<tr style="background-color: #b8cee3;">
+									<td>
+										<input type="radio" class="square-radio" />
+									</td>
 									<td style="padding: 0.5rem;">
-										<!-- Status Tag -->
 										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #3182CE; border-radius: 9999px; font-weight: bold;">AD HOC</span>
 									</td>
 									<td style="padding: 0.5rem;">Cy Ganderton</td>
@@ -341,6 +431,9 @@
 									</td>
 									<td style="padding: 0.5rem;">Feb 2nd</td>
 									<td style="padding: 0.5rem;">Feb 2nd</td>
+									<td>
+										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
+									</td>
 								</tr>
 																<!-- Repeat for other rows as needed -->
 							</tbody>
