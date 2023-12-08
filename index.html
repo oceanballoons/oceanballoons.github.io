@@ -344,53 +344,47 @@
 								<tr style="background-color: #E2E8F0;">
 									<th style="padding: 0.5rem;">Select</th>
 									<th style="padding: 0.5rem;">Status</th>
-									<th style="padding: 0.5rem;">Form Name</th>
-									<th style="padding: 0.5rem;">Name</th>
-									<th style="padding: 0.5rem;">Date</th>
-									<th style="padding: 0.5rem;">Amount</th>
-									<th style="padding: 0.5rem;">Test1</th>
-									<th style="padding: 0.5rem;">Test2</th>
+									<th style="padding: 0.5rem;" colspan="3">Form Name</th>
+									<th style="padding: 0.5rem;">Region</th>
+									<th style="padding: 0.5rem;">Facility</th>
+									<th style="padding: 0.5rem;">Department</th>
+									<td style="padding: 0.5rem;">Room</td>
+									<td style="padding: 0.5rem;">Frequency</td>
 									<th style="padding: 0.5rem;">Submissions</th>
 								</tr>
 							</thead>
 							<tbody>
 								<!-- Data Row -->								
 								<tr style="background-color: #cef2d9;">
-									<td>
-										<input type="radio" class="square-radio" />
-									</td>
+									<td><input type="radio" class="square-radio" /></td>
 									<td style="padding: 0.5rem;">
-										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #38A169; border-radius: 9999px; font-weight: bold;">COMPLETE</span>
+									  <span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #38A169; border-radius: 9999px; font-weight: bold;">COMPLETE</span>
 									</td>
-									<td style="padding: 0.5rem;">Cy Ganderton Longer name longer longer</td>
-									<td style="padding: 0.5rem;">Feb 2nd</td>
-									<td style="padding: 0.5rem;">
-										<!-- Amount with Black Icon -->
-										<svg data-src="https://unpkg.com/heroicons/20/solid/calculator.svg" class="inline-block h-5 w-5"></svg>
-										180 USD
-									</td>
-									<td style="padding: 0.5rem;">Feb 2nd</td>
-									<td style="padding: 0.5rem;">Feb 2nd</td>
+									<td style="padding: 0.5rem;" colspan="3">X-ray Room Check + Inventory</td>
+									<!-- Remove one of the other data cells to keep the total count consistent -->
+									<td style="padding: 0.5rem;">Calgary North</td>
+									<td style="padding: 0.5rem;">Foothills</td>
+									<td style="padding: 0.5rem;">X-ray</td>
+									<td style="padding: 0.5rem;">X01</td>
+									<td style="padding: 0.5rem;">Daily</td>
 									<td>
-										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
+									  <a href="#" class="action-link" title="Show Previous Submissions">...</a>
 									</td>
-								</tr>
+								  </tr>
 								<tr style="background-color: #f0e4cb;">
 									<td>
 										<input type="radio" class="square-radio" />
 									</td>
 									<td style="padding: 0.5rem;">
 										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #D69E2E; border-radius: 9999px; font-weight: bold;">PRIORITY</span>
+										
 									</td>
-									<td style="padding: 0.5rem;">Cy Ganderton</td>
-									<td style="padding: 0.5rem;">Feb 2nd</td>
-									<td style="padding: 0.5rem;">
-										<!-- Amount with Black Icon -->
-										<svg data-src="https://unpkg.com/heroicons/20/solid/bell.svg" class="inline-block h-5 w-5"></svg>
-										180 USD
-									</td>
-									<td style="padding: 0.5rem;">Feb 2nd</td>
-									<td style="padding: 0.5rem;">Feb 2nd</td>
+									<td style="padding: 0.5rem;" colspan="3">Ultrasound Facility Check</td>
+									<td style="padding: 0.5rem;">Calgary North</td>
+									<td style="padding: 0.5rem;">Foothills</td>
+									<td style="padding: 0.5rem;">Ultrasound</td>
+									<td style="padding: 0.5rem;">U02</td>
+									<td style="padding: 0.5rem;">Weekly</td>
 									<td>
 										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
 									</td>
@@ -402,16 +396,15 @@
 									<td style="padding: 0.5rem;">
 										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #C53030; border-radius: 9999px; font-weight: bold;">URGENT</span>
 									</td>
-									<td style="padding: 0.5rem;">Cy Ganderton</td>
-									<td style="padding: 0.5rem;">Feb 2nd</td>
-									<td style="padding: 0.5rem;">
-										<!-- Amount with Black Icon -->
-										<svg data-src="https://unpkg.com/heroicons/20/solid/calendar.svg" class="inline-block h-5 w-5"></svg>
-										180 USD
-									</td>
-									<td style="padding: 0.5rem;">Feb 2nd</td>
-									<td style="padding: 0.5rem;">Feb 2nd</td>
+									<td style="padding: 0.5rem;" colspan="3">Facility Safety Review</td>
+									<td style="padding: 0.5rem;">Calgary North</td>
+									<td style="padding: 0.5rem;">Peter Lougheed</td>
+									<td style="padding: 0.5rem;">Emergency Department</td>
+									<td style="padding: 0.5rem;">Emergency</td>
+									<td style="padding: 0.5rem;">Monthly</td>
 									<td>
+										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
+									</td>
 										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
 									</td>
 								</tr>
@@ -422,15 +415,12 @@
 									<td style="padding: 0.5rem;">
 										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #3182CE; border-radius: 9999px; font-weight: bold;">AD HOC</span>
 									</td>
-									<td style="padding: 0.5rem;">Cy Ganderton</td>
-									<td style="padding: 0.5rem;">Feb 2nd</td>
-									<td style="padding: 0.5rem;">
-										<!-- Amount with Black Icon -->
-										<svg data-src="https://unpkg.com/heroicons/20/solid/document-check.svg" class="inline-block h-5 w-5"></svg>
-										180 USD
-									</td>
-									<td style="padding: 0.5rem;">Feb 2nd</td>
-									<td style="padding: 0.5rem;">Feb 2nd</td>
+									<td style="padding: 0.5rem;" colspan="3">Ultrasound Probe Disinfection</td>
+									<td style="padding: 0.5rem;">Calgary South</td>
+									<td style="padding: 0.5rem;">Rockyview Hospital</td>
+									<td style="padding: 0.5rem;">Ultrasound</td>
+									<td style="padding: 0.5rem;">Reprocessing</td>
+									<td style="padding: 0.5rem;">Ad Hoc</td>
 									<td>
 										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
 									</td>
