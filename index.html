@@ -15,6 +15,15 @@
  		   	}
 			}
 
+			.top-banner {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 100; /* High z-index to keep it above other content */
+				background-color: #fff; /* Or any color you prefer */
+				/* Add more styles as needed (padding, box-shadow, etc.) */
+			}
 			.bottom-banner {
 				position: fixed;
 				bottom: 0;
@@ -36,6 +45,7 @@
 
 			/* Adjust body padding to prevent content from being hidden */
 			body {
+				padding-top: 60px; /* Adjust this value based on the height of your top banner */
 				padding-bottom: 60px; /* Height of the bottom banner */
 			}
 
@@ -112,6 +122,22 @@
 
 			/* /Style menu bar buttons */
 
+			/* Hide the search bar on mobile devices */
+
+			@media (max-width: 768px) {
+				.flex.items-center.gap-5 .input-sm {
+					display: none;
+				}
+			}
+
+			/* Optional: Explicitly show the search bar on desktop */
+			@media (min-width: 769px) {
+				.flex.items-center.gap-5 .input-sm {
+					display: block; /* or 'flex' or 'inline-block', depending on your layout */
+				}
+			}
+			/* /Hide the search bar on mobile devices */
+
 		</style>
 		
 		<!-- chart library -->
@@ -171,13 +197,21 @@
 	
 		<!-- drawer -->
 		<body class="drawer min-h-screen bg-base-200 lg:drawer-open">
-	    <!-- Drawer Toggle -->
-		
+	    
+	    <div class="top-banner">
+
+			Top Banner - don't know how to move the header bar into this and format properly.
+			
+
+			
+
+		</div>
+
+		<!-- Drawer Toggle -->
 		<input id="my-drawer" type="checkbox" class="drawer-toggle" />
 		<!-- dashboard content -->
 		<main class="drawer-content">
-			
-		
+					
 			<!-- header -->
 			<header class="col-span-12 flex justify-between lg:gap-4">
 				<!-- Mobile Menu Button and Logo -->
@@ -192,12 +226,12 @@
 
 				<!-- Right Aligned Elements -->
 				<div class="flex items-center gap-5">
-					<div>
-						<input
-							type="text"
-							placeholder="Search"
-							class="input input-sm rounded-full max-sm:w-24" />
-					</div>
+    <div>
+        <input
+            type="text"
+            placeholder="Search"
+            class="input input-sm rounded-full max-sm:w-24" />
+    </div>
 				<!-- dropdown -->
 				<div class="dropdown dropdown-end z-10">
 					<div tabindex="0" class="btn btn-circle btn-ghost">
