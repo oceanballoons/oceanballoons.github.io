@@ -329,113 +329,194 @@
 			</header>
 			<!-- /header -->
 
+
 			<!-- Dashboard Sections-->
 			<div id="dashboardSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target">
 				<h2 class="text-xl font-bold">Dashboard</h2>
 				
-				<!-- card -->
-				<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm xl:col-span-6">
-					<div class="card-body grow-0">
-						<h2 class="card-title">
-							<a class="link-hover link">Transactions</a>
-						</h2>
+
+			<!-- card -->
+			<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm">
+				<div class="card-body grow-0">
+					<h2 class="card-title">
+						<a class="link-hover link">Transactions</a>
+					</h2>
+				</div>
+				<div class="overflow-x-auto">
+					<div class="table-menu-bar">
+						<button>Edit</button>
+						<button>Add</button>
+						<button>Delete</button>
 					</div>
-					<div class="overflow-x-auto">
-						<div class="table-menu-bar">
-							<button>Edit</button>
-							<button>Add</button>
-							<button>Delete</button>
-						</div>
-						<table class="table table-zebra">
-							<thead>
-								<tr style="background-color: #E2E8F0;">
-									<th style="padding: 0.5rem;">Select</th>
-									<th style="padding: 0.5rem;">Status</th>
-									<th style="padding: 0.5rem;" colspan="3">Form Name</th>
-									<th style="padding: 0.5rem;">Region</th>
-									<th style="padding: 0.5rem;">Facility</th>
-									<th style="padding: 0.5rem;">Department</th>
-									<td style="padding: 0.5rem;">Room</td>
-									<td style="padding: 0.5rem;">Frequency</td>
-									<th style="padding: 0.5rem;">Submissions</th>
-								</tr>
-							</thead>
-							<tbody>
-								<!-- Data Row -->								
-								<tr style="background-color: #cef2d9;">
-									<td><input type="radio" class="square-radio" /></td>
-									<td style="padding: 0.5rem;">
-									  <span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #38A169; border-radius: 9999px; font-weight: bold;">COMPLETE</span>
-									</td>
-									<td style="padding: 0.5rem;" colspan="3">X-ray Room Check + Inventory</td>
-									<!-- Remove one of the other data cells to keep the total count consistent -->
-									<td style="padding: 0.5rem;">Calgary North</td>
-									<td style="padding: 0.5rem;">Foothills</td>
-									<td style="padding: 0.5rem;">X-ray</td>
-									<td style="padding: 0.5rem;">X01</td>
-									<td style="padding: 0.5rem; font-weight: 650;">Daily</td>
-									<td>
-									  <a href="#" class="action-link" title="Show Previous Submissions">...</a>
-									</td>
-								  </tr>
-								<tr style="background-color: #f0e4cb;">
-									<td>
-										<input type="radio" class="square-radio" />
-									</td>
-									<td style="padding: 0.5rem;">
-										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #D69E2E; border-radius: 9999px; font-weight: bold;">PRIORITY</span>
-										
-									</td>
-									<td style="padding: 0.5rem;" colspan="3">Ultrasound Facility Check</td>
-									<td style="padding: 0.5rem;">Calgary North</td>
-									<td style="padding: 0.5rem;">Foothills</td>
-									<td style="padding: 0.5rem;">Ultrasound</td>
-									<td style="padding: 0.5rem;">U02</td>
-									<td style="padding: 0.5rem; font-weight: 650;">Weekly</td>
-									<td>
-										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
-									</td>
-								</tr>
-								<tr style="background-color: #eac2c2;">
-									<td>
-										<input type="radio" class="square-radio" />
-									</td>
-									<td style="padding: 0.5rem;">
-										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #C53030; border-radius: 9999px; font-weight: bold;">URGENT</span>
-									</td>
-									<td style="padding: 0.5rem;" colspan="3">Facility Safety Review</td>
-									<td style="padding: 0.5rem;">Calgary North</td>
-									<td style="padding: 0.5rem;">Peter Lougheed</td>
-									<td style="padding: 0.5rem;">Emergency Department</td>
-									<td style="padding: 0.5rem;">Emergency</td>
-									<td style="padding: 0.5rem; font-weight: 650;">Monthly</td>
-									<td>
-										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
-									</td>
-								</tr>
-								<tr style="background-color: #b8cee3;">
-									<td>
-										<input type="radio" class="square-radio" />
-									</td>
-									<td style="padding: 0.5rem;">
-										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #3182CE; border-radius: 9999px; font-weight: bold;">AD HOC</span>
-									</td>
-									<td style="padding: 0.5rem;" colspan="3">Ultrasound Probe Disinfection</td>
-									<td style="padding: 0.5rem;">Calgary South</td>
-									<td style="padding: 0.5rem;">Rockyview Hospital</td>
-									<td style="padding: 0.5rem;">Ultrasound</td>
-									<td style="padding: 0.5rem;">Reprocessing</td>
-									<td style="padding: 0.5rem; font-weight: 650;">Ad Hoc</td>
-									<td>
-										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
-									</td>
-								</tr>
-																<!-- Repeat for other rows as needed -->
-							</tbody>
-						</table>
-					</div>
-				</section>
-				<!-- /card -->
+					<table class="table table-zebra">
+						<thead>
+							<tr style="background-color: #E2E8F0;">
+								<th style="padding: 0.5rem;">Select</th>
+								<th style="padding: 0.5rem;">Status</th>
+								<th style="padding: 0.5rem;" colspan="3">Form Name</th>
+								<th style="padding: 0.5rem;">Region</th>
+								<th style="padding: 0.5rem;">Facility</th>
+								<th style="padding: 0.5rem;">Department</th>
+								<td style="padding: 0.5rem;">Room</td>
+								<td style="padding: 0.5rem;">Frequency</td>
+								<th style="padding: 0.5rem;">Submissions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Data Row -->								
+							<tr style="background-color: #cef2d9;">
+								<td><input type="radio" class="square-radio" /></td>
+								<td style="padding: 0.5rem;">
+								  <span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #38A169; border-radius: 9999px; font-weight: bold;">COMPLETE</span>
+								</td>
+								<td style="padding: 0.5rem;" colspan="3">X-ray Room Check + Inventory</td>
+								<!-- Remove one of the other data cells to keep the total count consistent -->
+								<td style="padding: 0.5rem;">Calgary North</td>
+								<td style="padding: 0.5rem;">Foothills</td>
+								<td style="padding: 0.5rem;">X-ray</td>
+								<td style="padding: 0.5rem;">X01</td>
+								<td style="padding: 0.5rem; font-weight: 650;">Daily</td>
+								<td>
+								  <a href="#" class="action-link" title="Show Previous Submissions">...</a>
+								</td>
+							  </tr>
+							<tr style="background-color: #f0e4cb;">
+								<td>
+									<input type="radio" class="square-radio" />
+								</td>
+								<td style="padding: 0.5rem;">
+									<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #D69E2E; border-radius: 9999px; font-weight: bold;">PRIORITY</span>
+									
+								</td>
+								<td style="padding: 0.5rem;" colspan="3">Ultrasound Facility Check</td>
+								<td style="padding: 0.5rem;">Calgary North</td>
+								<td style="padding: 0.5rem;">Foothills</td>
+								<td style="padding: 0.5rem;">Ultrasound</td>
+								<td style="padding: 0.5rem;">U02</td>
+								<td style="padding: 0.5rem; font-weight: 650;">Weekly</td>
+								<td>
+									<a href="#" class="action-link" title="Show Previous Submissions">...</a>
+								</td>
+							</tr>
+							<tr style="background-color: #eac2c2;">
+								<td>
+									<input type="radio" class="square-radio" />
+								</td>
+								<td style="padding: 0.5rem;">
+									<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #C53030; border-radius: 9999px; font-weight: bold;">URGENT</span>
+								</td>
+								<td style="padding: 0.5rem;" colspan="3">Facility Safety Review</td>
+								<td style="padding: 0.5rem;">Calgary North</td>
+								<td style="padding: 0.5rem;">Peter Lougheed</td>
+								<td style="padding: 0.5rem;">Emergency Department</td>
+								<td style="padding: 0.5rem;">Emergency</td>
+								<td style="padding: 0.5rem; font-weight: 650;">Monthly</td>
+								<td>
+									<a href="#" class="action-link" title="Show Previous Submissions">...</a>
+								</td>
+							</tr>
+							<tr style="background-color: #b8cee3;">
+								<td>
+									<input type="radio" class="square-radio" />
+								</td>
+								<td style="padding: 0.5rem;">
+									<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #3182CE; border-radius: 9999px; font-weight: bold;">AD HOC</span>
+								</td>
+								<td style="padding: 0.5rem;" colspan="3">Ultrasound Probe Disinfection</td>
+								<td style="padding: 0.5rem;">Calgary South</td>
+								<td style="padding: 0.5rem;">Rockyview Hospital</td>
+								<td style="padding: 0.5rem;">Ultrasound</td>
+								<td style="padding: 0.5rem;">Reprocessing</td>
+								<td style="padding: 0.5rem; font-weight: 650;">Ad Hoc</td>
+								<td>
+									<a href="#" class="action-link" title="Show Previous Submissions">...</a>
+								</td>
+							</tr>
+															<!-- Repeat for other rows as needed -->
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<!-- /card -->
+
+			<!-- Table Card -->
+			<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm xl:col-span-6">				<div class="card-body grow-0">
+					<h2 class="card-title">
+						<a class="link-hover link">Transactions</a>
+					</h2>
+				</div>
+				<div class="overflow-x-auto">
+					<table class="table table-zebra">
+						<thead>
+							<tr style="background-color: #E2E8F0;">
+								<th style="padding: 0.5rem;">Status</th>
+								<th style="padding: 0.5rem;">Name</th>
+								<th style="padding: 0.5rem;">Date</th>
+								<th style="padding: 0.5rem;">Amount</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Example row -->
+							<tr style="background-color: #cef2d9;">
+								<td style="padding: 0.5rem;">
+									<!-- Status Tag -->
+									<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #38A169; border-radius: 9999px; font-weight: bold;">COMPLETE</span>
+								</td>
+								<td style="padding: 0.5rem;">Cy Ganderton</td>
+								<td style="padding: 0.5rem;">Feb 2nd</td>
+								<td style="padding: 0.5rem;">
+									<!-- Amount with Black Icon -->
+									<svg data-src="https://unpkg.com/heroicons/20/solid/calculator.svg" class="inline-block h-5 w-5"></svg>
+									180 USD
+								</td>
+							</tr>
+							<tr style="background-color: #f0e4cb;">
+								<td style="padding: 0.5rem;">
+									<!-- Status Tag -->
+									<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #D69E2E; border-radius: 9999px; font-weight: bold;">PRIORITY</span>
+								</td>
+								<td style="padding: 0.5rem;">Cy Ganderton</td>
+								<td style="padding: 0.5rem;">Feb 2nd</td>
+								<td style="padding: 0.5rem;">
+									<!-- Amount with Black Icon -->
+									<svg data-src="https://unpkg.com/heroicons/20/solid/bell.svg" class="inline-block h-5 w-5"></svg>
+									180 USD
+								</td>
+							</tr>
+							<tr style="background-color: #eac2c2;">
+								<td style="padding: 0.5rem;">
+									<!-- Status Tag -->
+									<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #C53030; border-radius: 9999px; font-weight: bold;">URGENT</span>
+								</td>
+								<td style="padding: 0.5rem;">Cy Ganderton</td>
+								<td style="padding: 0.5rem;">Feb 2nd</td>
+								<td style="padding: 0.5rem;">
+									<!-- Amount with Black Icon -->
+									<svg data-src="https://unpkg.com/heroicons/20/solid/calendar.svg" class="inline-block h-5 w-5"></svg>
+									180 USD
+								</td>
+							</tr>
+							<tr style="background-color: #b8cee3;">
+								<td style="padding: 0.5rem;">
+									<!-- Status Tag -->
+									<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #3182CE; border-radius: 9999px; font-weight: bold;">IN PROGRESS</span>
+								</td>
+								<td style="padding: 0.5rem;">Cy Ganderton</td>
+								<td style="padding: 0.5rem;">Feb 2nd</td>
+								<td style="padding: 0.5rem;">
+									<!-- Amount with Black Icon -->
+									<svg data-src="https://unpkg.com/heroicons/20/solid/document-check.svg" class="inline-block h-5 w-5"></svg>
+									180 USD
+								</td>
+							</tr>
+							<!-- Repeat for other rows as needed -->
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			
+				
 				<!-- card -->
 				<section class="card col-span-12 bg-primary text-primary-content shadow-sm xl:col-span-6">
 					<div class="card-body pb-0">
@@ -1254,6 +1335,126 @@
 					</div>
 				</section>
 				<!-- /card -->
+
+
+				<!-- card -->
+				<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm">
+					<div class="card-body grow-0">
+						<h2 class="card-title">
+							<a class="link-hover link">Transactions</a>
+						</h2>
+					</div>
+					<div class="overflow-x-auto">
+						<div class="table-menu-bar">
+							<button>Edit</button>
+							<button>Add</button>
+							<button>Delete</button>
+						</div>
+						<table class="table table-zebra">
+							<thead>
+								<tr style="background-color: #E2E8F0;">
+									<th style="padding: 0.5rem;">Select</th>
+									<th style="padding: 0.5rem;">Status</th>
+									<th style="padding: 0.5rem;" colspan="3">Form Name</th>
+									<th style="padding: 0.5rem;">Region</th>
+									<th style="padding: 0.5rem;">Facility</th>
+									<th style="padding: 0.5rem;">Department</th>
+									<td style="padding: 0.5rem;">Room</td>
+									<td style="padding: 0.5rem;">Frequency</td>
+									<th style="padding: 0.5rem;">Submissions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Data Row -->								
+								<tr style="background-color: #cef2d9;">
+									<td><input type="radio" class="square-radio" /></td>
+									<td style="padding: 0.5rem;">
+									  <span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #38A169; border-radius: 9999px; font-weight: bold;">COMPLETE</span>
+									</td>
+									<td style="padding: 0.5rem;" colspan="3">X-ray Room Check + Inventory</td>
+									<!-- Remove one of the other data cells to keep the total count consistent -->
+									<td style="padding: 0.5rem;">Calgary North</td>
+									<td style="padding: 0.5rem;">Foothills</td>
+									<td style="padding: 0.5rem;">X-ray</td>
+									<td style="padding: 0.5rem;">X01</td>
+									<td style="padding: 0.5rem; font-weight: 650;">Daily</td>
+									<td>
+									  <a href="#" class="action-link" title="Show Previous Submissions">...</a>
+									</td>
+								  </tr>
+								<tr style="background-color: #f0e4cb;">
+									<td>
+										<input type="radio" class="square-radio" />
+									</td>
+									<td style="padding: 0.5rem;">
+										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #D69E2E; border-radius: 9999px; font-weight: bold;">PRIORITY</span>
+										
+									</td>
+									<td style="padding: 0.5rem;" colspan="3">Ultrasound Facility Check</td>
+									<td style="padding: 0.5rem;">Calgary North</td>
+									<td style="padding: 0.5rem;">Foothills</td>
+									<td style="padding: 0.5rem;">Ultrasound</td>
+									<td style="padding: 0.5rem;">U02</td>
+									<td style="padding: 0.5rem; font-weight: 650;">Weekly</td>
+									<td>
+										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
+									</td>
+								</tr>
+								<tr style="background-color: #eac2c2;">
+									<td>
+										<input type="radio" class="square-radio" />
+									</td>
+									<td style="padding: 0.5rem;">
+										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #C53030; border-radius: 9999px; font-weight: bold;">URGENT</span>
+									</td>
+									<td style="padding: 0.5rem;" colspan="3">Facility Safety Review</td>
+									<td style="padding: 0.5rem;">Calgary North</td>
+									<td style="padding: 0.5rem;">Peter Lougheed</td>
+									<td style="padding: 0.5rem;">Emergency Department</td>
+									<td style="padding: 0.5rem;">Emergency</td>
+									<td style="padding: 0.5rem; font-weight: 650;">Monthly</td>
+									<td>
+										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
+									</td>
+								</tr>
+								<tr style="background-color: #b8cee3;">
+									<td>
+										<input type="radio" class="square-radio" />
+									</td>
+									<td style="padding: 0.5rem;">
+										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #3182CE; border-radius: 9999px; font-weight: bold;">AD HOC</span>
+									</td>
+									<td style="padding: 0.5rem;" colspan="3">Ultrasound Probe Disinfection</td>
+									<td style="padding: 0.5rem;">Calgary South</td>
+									<td style="padding: 0.5rem;">Rockyview Hospital</td>
+									<td style="padding: 0.5rem;">Ultrasound</td>
+									<td style="padding: 0.5rem;">Reprocessing</td>
+									<td style="padding: 0.5rem; font-weight: 650;">Ad Hoc</td>
+									<td>
+										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
+									</td>
+								</tr>
+																<!-- Repeat for other rows as needed -->
+							</tbody>
+						</table>
+					</div>
+				</section>
+				<!-- /card -->
+				<!-- card -->
+				<section class="card col-span-12 bg-primary text-primary-content shadow-sm xl:col-span-6">
+					<div class="card-body pb-0">
+						<h2 class="card-title">21,500 USD</h2>
+						<a class="link-hover link text-xs">Revenue report →</a>
+					</div>
+					<tc-column
+						class="h-full w-full p-4 pt-0 [--shape-color:oklch(var(--pc))]"
+						values="[12,10,12,4,13,16,14,10,12,11,17,18,16,17,20,14,15,13,12,14]"
+						min="0"
+						shape-radius="4"
+						shape-gap="4"></tc-column>
+				</section>
+				<!-- /card -->
+
 
 				<!-- Table Card -->
 				<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm">
