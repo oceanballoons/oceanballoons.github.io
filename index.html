@@ -13,7 +13,31 @@
     		tr {
         	color: black;
  		   	}
-}
+			}
+
+			.bottom-banner {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: rgba(27, 76, 47, 0.4); /* Dark purple with 40% opacity */
+				z-index: 1000; /* Ensure it's above other content */
+				padding: 8px; /* Adjust as needed */
+				text-align: center; /* For centering the content */
+				box-shadow: 0 -2px 4px rgba(213, 123, 123, 0.2); /* Slight shadow for depth */
+				border-top: 1px solid rgba(221, 97, 97, 0.2); /* Subtle top border */
+				}
+
+			.bottom-logo {
+				max-height: 1.2rem; /* Maximum logo height */
+				width: auto; /* Maintain aspect ratio */
+				display: inline-block; /* Aligns image properly */
+				}
+
+			/* Adjust body padding to prevent content from being hidden */
+			body {
+				padding-bottom: 60px; /* Height of the bottom banner */
+			}
 		</style>
 		
 		<!-- chart library -->
@@ -63,22 +87,6 @@
 			}
 		</script>
 
-		<script>
-		.header {
-			position: fixed;
-			top: 0;
-			width: 100%;
-			background-color: gray;
-			z-index: 1000; /* High value to ensure it's above other content */
-			/* Add other styling as needed, like padding, border, etc. */
-			}
-
-		.main-content {
-				margin-top: 60px; /* Adjust this value based on your header's height */
-				/* Other styles for your main content */
-			}
-
-		</script>
 
 	</head>
 
@@ -1367,5 +1375,10 @@
 			<!-- /sidebar menu -->
 		</aside>
 	</body>
+
+	<div class="bottom-banner">
+		<img src="images/userlogo/kinetix_logo_transparent.png" alt="Logo" class="bottom-logo">
+	</div>
+	  
 	<!-- /drawer -->
 </html>
