@@ -51,19 +51,23 @@
 			src="https://cdn.jsdelivr.net/npm/external-svg-loader@1.6.10/svg-loader.min.js"
 			async></script>
 		<!-- theme switcher script (Alfred)-->
+		
 		<script>
 			function toggleTheme() {
-				const html = document.documentElement;
-				const logo = document.getElementById('logo');
-		
-				if (html.getAttribute('data-theme') === 'dark') {
-					html.setAttribute('data-theme', 'light');
-					logo.src = 'images/logo/clinic_checklist_logo.png'; // Light theme logo
-				} else {
-					html.setAttribute('data-theme', 'dark');
-					logo.src = 'images/logo/clinic_checklist_logo_dark.png'; // Dark theme logo
-				}
+			const html = document.documentElement;
+			const mainLogo = document.getElementById('logo');
+			const sidebarLogo = document.getElementById('sidebar-logo');
+
+			if (html.getAttribute('data-theme') === 'dark') {
+				html.setAttribute('data-theme', 'light');
+				mainLogo.src = 'images/logo/clinic_checklist_logo.png'; // Light theme main logo
+				sidebarLogo.src = 'images/logo/clinic_checklist_logo.png'; // Light theme sidebar logo
+			} else {
+				html.setAttribute('data-theme', 'dark');
+				mainLogo.src = 'images/logo/clinic_checklist_logo_dark.png'; // Dark theme main logo
+				sidebarLogo.src = 'images/logo/clinic_checklist_logo_dark.png'; // Dark theme sidebar logo
 			}
+		}
 		</script>
 
 		<script>
@@ -108,18 +112,12 @@
 						<svg data-src="https://unpkg.com/heroicons/20/solid/bars-3.svg" class="h-5 w-5"></svg>
 					</label>
 					<div class="grow lg:hidden">
-						<img id="logo-mobile" src="images/logo/clinic_checklist_logo.png" alt="Clinic Checklist Logo" style="width: 250px;">
+						<img id="logo" src="images/logo/clinic_checklist_logo.png" alt="Clinic Checklist Logo" style="width: 250px;">
 					</div>
 				</div>
 
 				<!-- Right Aligned Elements -->
 				<div class="flex items-center gap-5">
-					<!-- theme switcher -->
-					<label for="theme-switcher" class="flex items-center gap-1" style="font-size: .8rem;">
-						Dark Mode
-						<input id="theme-switcher" type="checkbox" onchange="toggleTheme()" class="toggle toggle-sm" />
-					</label>
-					
 					<div>
 						<input
 							type="text"
@@ -1267,7 +1265,7 @@
 			<nav class="flex min-h-screen w-72 flex-col gap-2 overflow-y-auto bg-base-100 px-6 py-10">
 				<!-- Logo for desktop view -->
 				<div class="hidden lg:block mx-auto">
-					<img id="logo-desktop" src="images/logo/clinic_checklist_logo.png" alt="Clinic Checklist Logo" style="width: 250px;">
+					<img id="sidebar-logo" src="images/logo/clinic_checklist_logo.png" alt="Clinic Checklist Logo" style="width: 250px;">
 				</div>
 				<ul class="menu">
 					<li>
@@ -1369,6 +1367,14 @@
 								<li><a>Support</a></li>
 							</ul>
 						</details>
+					</li>
+					<li>
+						<li></li>
+					<!-- theme switcher -->
+					<label for="theme-switcher" class="flex items-center gap-1" style="font-size: .8rem;">
+					Night Mode
+					<input id="theme-switcher" type="checkbox" onchange="toggleTheme()" class="toggle toggle-sm" />
+					</label>
 					</li>
 				</ul>
 			</nav>
