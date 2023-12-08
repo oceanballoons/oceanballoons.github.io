@@ -38,6 +38,16 @@
 			body {
 				padding-bottom: 60px; /* Height of the bottom banner */
 			}
+
+			/* Add Padding and a Negative Margin to Your Sections */
+			.anchor-target {
+			padding-top: 100px; /* Height of your fixed header */
+			margin-top: -100px; /* Negative value of the above padding */
+			}
+
+			html {
+				font-size: 18px
+			}
 		</style>
 		
 		<!-- chart library -->
@@ -222,7 +232,7 @@
 			<!-- /header -->
 
 			<!-- Dashboard Sections-->
-			<div id="dashboardSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10">
+			<div id="dashboardSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target">
 				<h2 class="text-xl font-bold">Dashboard</h2>
 				<!-- stats -->
 				<section class="stats stats-vertical col-span-12 w-full shadow-sm xl:stats-horizontal">
@@ -1078,7 +1088,7 @@
 			</div>
 
 
-			<div id="usersSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10" style="display: none;">
+			<div id="usersSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target" style="display: none;">
 				<h2 class="text-xl font-bold">Users</h2>
 				
 				<!-- card -->
