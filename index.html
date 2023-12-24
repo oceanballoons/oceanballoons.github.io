@@ -95,7 +95,7 @@
 				justify-content: start;
 				gap: 10px;
 				margin-bottom: 20px;
-				background-color: #808080; /* Blue color */
+				background-color: #808080;
   				border: none;
   				border-radius: 5px;
   				padding: 5px 20px;
@@ -106,7 +106,7 @@
 				}
 
 			.table-menu-bar button {
-				background-color: #f5f5f5; /* Blue color */
+				background-color: #f5f5f5;
 				color: rgb(0, 0, 0);
 				border: none;
 				border-radius: 5px;
@@ -117,7 +117,7 @@
 				}
 
 			.table-menu-bar button:hover {
-			background-color: #c9c9c9; /* Darker blue on hover */
+			background-color: #c9c9c9;
 			}
 
 			/* /Style menu bar buttons */
@@ -332,14 +332,19 @@
 
 			<!-- Dashboard Sections-->
 			<div id="dashboardSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target">
-				<h2 class="text-xl font-bold">Dashboard</h2>
+				<div class="col-span-12 lg:col-span-6"> <!-- Adjust col-span as needed -->
+					<h2 class="text-xl font-bold">
+						<span style="color: grey;">Demo Workspace ></span> Dashboard
+					</h2>
+				</div>
+
 				
 
 			<!-- card -->
 			<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm">
 				<div class="card-body grow-0">
 					<h2 class="card-title">
-						<a class="link-hover link">Transactions</a>
+						<a class="link-hover link">Current Checklists</a>
 					</h2>
 				</div>
 				<div class="overflow-x-auto">
@@ -347,7 +352,7 @@
 					<table class="table table-zebra">
 						<thead>
 							<tr style="background-color: #E2E8F0;">
-								<th style="padding: 0.5rem;">Seleaact</th>
+								<th style="padding: 0.5rem;">Select</th>
 								<th style="padding: 0.5rem;">Status</th>
 								<th style="padding: 0.5rem;" colspan="1">Form Name</th>
 								<th style="padding: 0.5rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -448,59 +453,57 @@
 						</tr>
 					</thead>
 					<tbody>
-						<!-- Example row -->
-						<tr style="background-color: #836060;">
+						<!-- First row - Light Red -->
+						<tr style="background-color: #ffcccc;"> <!-- Lighter shade of red -->
 							<td style="padding: 0.5rem;">
-								<!-- Status Tag -->
 								<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #a9facf; border-radius: 9999px; font-weight: bold;">TEST</span>
 							</td>
-							<td style="padding: 0.5rem;">Cy Ganderton</td>
+							<td style="padding: 0.5rem;"><strong>Cy Ganderton</strong></td>
 							<td style="padding: 0.5rem;">Feb 2nd</td>
 							<td style="padding: 0.5rem;">
-								<!-- Amount with Black Icon -->
 								<svg data-src="https://unpkg.com/heroicons/20/solid/calculator.svg" class="inline-block h-5 w-5"></svg>
 								180 USD
 							</td>
 						</tr>
-						<tr style="background-color: #9dafc0;">
+						<!-- Second row - Light Green -->
+						<tr style="background-color: #ccffcc;"> <!-- Lighter shade of green -->
 							<td style="padding: 0.5rem;">
-								<!-- Status Tag -->
 								<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #5994cb; border-radius: 9999px; font-weight: bold;">TEST</span>
 							</td>
-							<td style="padding: 0.5rem;">Cy Ganderton</td>
+							<td style="padding: 0.5rem;"><strong>Cy Ganderton</strong></td>
 							<td style="padding: 0.5rem;">Feb 2nd</td>
 							<td style="padding: 0.5rem;">
-								<!-- Amount with Black Icon -->
 								<svg data-src="https://unpkg.com/heroicons/20/solid/bell.svg" class="inline-block h-5 w-5"></svg>
 								180 USD
 							</td>
 						</tr>
-						<tr style="background-color: #836060;">
+						<!-- Third row - Light Yellow -->
+						<tr style="background-color: #ffffcc;"> <!-- Lighter shade of yellow -->
 							<td style="padding: 0.5rem;">
-								<!-- Status Tag -->
 								<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #a9facf; border-radius: 9999px; font-weight: bold;">TEST</span>
 							</td>
-							<td style="padding: 0.5rem;">Cy Ganderton</td>
+							<td style="padding: 0.5rem;"><strong>Cy Ganderton</strong></td>
 							<td style="padding: 0.5rem;">Feb 2nd</td>
 							<td style="padding: 0.5rem;">
-								<!-- Amount with Black Icon -->
 								<svg data-src="https://unpkg.com/heroicons/20/solid/calendar.svg" class="inline-block h-5 w-5"></svg>
 								180 USD
 							</td>
 						</tr>
-						<tr style="background-color: #9dafc0;">
+						<!-- Fourth row - Light Red -->
+						<tr style="background-color: #ffcccc;"> <!-- Lighter shade of red again -->
 							<td style="padding: 0.5rem;">
-								<!-- Status Tag -->
 								<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #5994cb; border-radius: 9999px; font-weight: bold;">TEST</span>
 							</td>
-							<td style="padding: 0.5rem;">Cy Ganderton</td>
+							<td style="padding: 0.5rem;"><strong>Cy Ganderton</strong></td>
 							<td style="padding: 0.5rem;">Feb 2nd</td>
 							<td style="padding: 0.5rem;">
-								<!-- Amount with Black Icon -->
 								<svg data-src="https://unpkg.com/heroicons/20/solid/document-check.svg" class="inline-block h-5 w-5"></svg>
 								180 USD
 							</td>
 						</tr>
+					</tbody>
+					
+					
 						<!-- Repeat for other rows as needed -->
 					</tbody>
 				</table>
@@ -1234,11 +1237,13 @@
 			</div>
 
 
-			<div id="usersSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target" style="display: none;">
-				<h2 class="text-xl font-bold">Users</h2>
-				
-				
-
+			<!-- User Section-->
+			<div id="usersSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target">
+				<div class="col-span-12 lg:col-span-6"> <!-- Adjust col-span as needed -->
+					<h2 class="text-xl font-bold">
+						<span style="color: grey;">Demo Workspace ></span> Users
+					</h2>
+				</div>
 
 				<!-- card -->
 				<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm">
@@ -1464,6 +1469,8 @@
 					<img id="sidebar-logo" src="images/logo/clinic_checklist_logo.png" alt="Clinic Checklist Logo" style="width: 250px;">
 				</div>
 				<ul class="menu">
+					<li style="padding-left: 2px; font-size: 1rem;"><strong>DEMO WORKSPACE</strong></li>
+
 					<li>
 						<a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">
 							<svg data-src="https://unpkg.com/heroicons/20/solid/home.svg" class="h-5 w-5"></svg>
