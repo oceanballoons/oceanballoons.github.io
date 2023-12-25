@@ -138,6 +138,10 @@
 			}
 			/* /Hide the search bar on mobile devices */
 
+			.force-black-text {
+			color: black !important;
+			}
+
 		</style>
 		
 		<!-- chart library -->
@@ -349,8 +353,8 @@
 				</div>
 				<div class="overflow-x-auto">
 				
-					<table class="table table-zebra">
-						<thead>
+					<table class="table table-zebra force-black-text">
+						<thead class="force-black-text">
 							<tr style="background-color: #E2E8F0;">
 								<th style="padding: 0.5rem;">Select</th>
 								<th style="padding: 0.5rem;">Status</th>
@@ -443,8 +447,8 @@
 				</h2>
 			</div>
 			<div class="overflow-x-auto">
-				<table class="table table-zebra">
-					<thead>
+				<table class="table table-zebra force-black-text">
+					<thead class="force-black-text">
 						<tr style="background-color: #E2E8F0;">
 							<th style="padding: 0.5rem;">Status</th>
 							<th style="padding: 0.5rem;">Name</th>
@@ -456,7 +460,7 @@
 						<!-- First row - Light Red -->
 						<tr style="background-color: #ffcccc;"> <!-- Lighter shade of red -->
 							<td style="padding: 0.5rem;">
-								<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #a9facf; border-radius: 9999px; font-weight: bold;">TEST</span>
+								<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #38A169; border-radius: 9999px; font-weight: bold;">TEST</span>
 							</td>
 							<td style="padding: 0.5rem;"><strong>Cy Ganderton</strong></td>
 							<td style="padding: 0.5rem;">Feb 2nd</td>
@@ -468,7 +472,7 @@
 						<!-- Second row - Light Green -->
 						<tr style="background-color: #ccffcc;"> <!-- Lighter shade of green -->
 							<td style="padding: 0.5rem;">
-								<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #5994cb; border-radius: 9999px; font-weight: bold;">TEST</span>
+								<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #3182CE; border-radius: 9999px; font-weight: bold;">TEST</span>
 							</td>
 							<td style="padding: 0.5rem;"><strong>Cy Ganderton</strong></td>
 							<td style="padding: 0.5rem;">Feb 2nd</td>
@@ -480,7 +484,7 @@
 						<!-- Third row - Light Yellow -->
 						<tr style="background-color: #ffffcc;"> <!-- Lighter shade of yellow -->
 							<td style="padding: 0.5rem;">
-								<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #a9facf; border-radius: 9999px; font-weight: bold;">TEST</span>
+								<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #38A169; border-radius: 9999px; font-weight: bold;">TEST</span>
 							</td>
 							<td style="padding: 0.5rem;"><strong>Cy Ganderton</strong></td>
 							<td style="padding: 0.5rem;">Feb 2nd</td>
@@ -492,7 +496,7 @@
 						<!-- Fourth row - Light Red -->
 						<tr style="background-color: #ffcccc;"> <!-- Lighter shade of red again -->
 							<td style="padding: 0.5rem;">
-								<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #5994cb; border-radius: 9999px; font-weight: bold;">TEST</span>
+								<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #3182CE; border-radius: 9999px; font-weight: bold;">TEST</span>
 							</td>
 							<td style="padding: 0.5rem;"><strong>Cy Ganderton</strong></td>
 							<td style="padding: 0.5rem;">Feb 2nd</td>
@@ -1249,17 +1253,17 @@
 				<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm">
 					<div class="card-body grow-0">
 						<h2 class="card-title">
-							<a class="link-hover link">Transactions</a>
+							<a class="link-hover link text-black">Transactions</a>
 						</h2>
 					</div>
 					<div class="overflow-x-auto">
-						<div class="table-menu-bar">
-							<button>Edit</button>
-							<button>Add</button>
+						<div class="table-menu-bar text-black">
+							<button class="text-black">Edit</button>
+							<button class="text-black">Add</button>
 							<button>Delete</button>
 						</div>
-						<table class="table table-zebra">
-							<thead>
+						<table class="table table-zebra force-black-text">
+							<thead class="force-black-text">
 								<tr style="background-color: #E2E8F0;">
 									<th style="padding: 0.5rem;">Seleaact</th>
 									<th style="padding: 0.5rem;">Status</th>
@@ -1361,7 +1365,7 @@
 					<div class="overflow-x-auto">
 						<table class="table table-zebra">
 							<tbody>
-								<tr style="background: rgb(200, 246, 200) -100px;">
+								<tr>
 									<td>Users Section</td>
 									<td>Feb 2nd</td>
 									<td>
@@ -1371,7 +1375,7 @@
 										180 USD
 									</td>
 								</tr>
-								<tr class="bg-yellow-100">
+								<tr>
 									<td>Hart Hagerty</td>
 									<td>Sep 2nd</td>
 									<td>
@@ -1475,8 +1479,20 @@
 						<a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">
 							<svg data-src="https://unpkg.com/heroicons/20/solid/home.svg" class="h-5 w-5"></svg>
 							Dashboard
+							<div class="info-container">
+								<i class="info-icon">i</i>
+								<div class="tooltip">Dashboard is a collection of charts and tables that can be customized.</div>
+							</div>
 						</a>
 					</li>
+
+					
+
+					
+    
+    
+</div>
+
 					<li>
 						<a href="#usersSection" id="usersLink" onclick="showSection('usersSection', event)">
 							<svg data-src="https://unpkg.com/heroicons/20/solid/user.svg" class="h-5 w-5"></svg>
