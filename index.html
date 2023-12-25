@@ -1453,7 +1453,7 @@
 			<aside class="drawer-side z-10">
 			<label for="my-drawer" class="drawer-overlay"></label>
 			<!-- sidebar menu -->
-			<nav class="flex min-h-screen w-72 flex-col gap-2 overflow-y-auto bg-base-100 px-6 py-10">
+			<nav class="flex min-h-screen w-80 flex-col gap-2 overflow-y-auto bg-base-100 px-8 py-8">
 				<!-- Logo for desktop view -->
 				<div class="hidden lg:block mx-auto">
 					<img id="sidebar-logo" src="images/logo/clinic_checklist_logo.png" alt="Clinic Checklist Logo" style="width: 250px;">
@@ -1487,12 +1487,12 @@
 						<details>
 							<summary>
 								<svg
-									data-src="https://unpkg.com/heroicons/20/solid/home.svg"
+									data-src="https://unpkg.com/heroicons/20/solid/check-circle.svg"
 									class="h-5 w-5"></svg>
 								Checklists
 								<div class="info-container" tabindex="0"> <!-- tabindex for focus -->
 									<i class="info-icon">i</i>
-									<div class="tooltip">Dashboard is a collection of charts and tables that can be customized.</div>
+									<div class="tooltip">Manage all your Checklist/Forms/Logs here</div>
 								</div>
 							</summary>
 							<ul>
@@ -1504,32 +1504,73 @@
 						</details>
 					</li>			
 
+					<li>
+						<details>
+							<summary>
+								<svg
+									data-src="https://unpkg.com/heroicons/20/solid/check-circle.svg"
+									class="h-5 w-5"></svg>
+								Rooms + Equipment
+								<div class="info-container" tabindex="0"> <!-- tabindex for focus -->
+									<i class="info-icon">i</i>
+									<div class="tooltip">Manage your rooms and equipment.</div>
+								</div>
+							</summary>
+							<ul>
+								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Rooms Management</a></li>
+								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Equipment Tracking</a></li>
+								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Maintenance Schedules</a></li>
+							</ul>
+						</details>
+					</li>			
 					
 					<li>
 						<a href="#usersSection" id="usersLink" onclick="showSection('usersSection', event)">
-							<svg data-src="https://unpkg.com/heroicons/20/solid/user.svg" class="h-5 w-5"></svg>
-							Users
+							<svg data-src="https://unpkg.com/heroicons/20/solid/chart-bar.svg" class="h-5 w-5"></svg>
+							Analytics + Reports
 						</a>
 					</li>
+
+					<li>
+						<details>
+							<summary>
+								<svg
+									data-src="https://unpkg.com/heroicons/20/solid/user.svg"
+									class="h-5 w-5"></svg>
+								User Management
+								<div class="info-container" tabindex="0"> <!-- tabindex for focus -->
+									<i class="info-icon">i</i>
+									<div class="tooltip">Customize and assign user accounts, including roles, permissions, and access levels.</div>
+								</div>
+							</summary>
+							<ul>
+								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">User Profiles</a></li>
+								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Role Assignment</a></li>
+								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Activity Logs</a></li>
+								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Group Management</a></li>
+								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Access Control</a></li>
+							</ul>
+						</details>
+					</li>		
+
 					<li>
 						<details>
 							<summary>
 								<svg
 									data-src="https://unpkg.com/heroicons/20/solid/squares-2x2.svg"
 									class="h-5 w-5"></svg>
-								Products
+								Inventory + Resources
 								<div class="info-container" tabindex="0"> <!-- tabindex for focus -->
 									<i class="info-icon">i</i>
-									<div class="tooltip">Dashboard is a collection of charts and tables that can be customized.</div>
+									<div class="tooltip">Manage your supply room, POs and inventory.</div>
 								</div>
 							</summary>
 							<ul>
-								<li><a>All Products</a></li>
-								<li><a>Add New</a></li>
-								<li><a>Categories</a></li>
-								<li><a>Tags</a></li>
-								<li><a>Reports</a></li>
-								<li><a>Archive</a></li>
+								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Supply Room Management</a></li>
+								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Inventory Management</a></li>
+								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Inventory Audits</a></li>
+								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Vendor Management</a></li>
+								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Inventory Audits</a></li>
 							</ul>
 						</details>
 					</li>
