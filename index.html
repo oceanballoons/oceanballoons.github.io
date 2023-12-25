@@ -134,6 +134,13 @@
 			}
 
 		</style>
+
+		<style>
+			#table-pagination {
+				text-align: right; /* Aligns content to the right */
+				padding-right: 1rem; /* Adds padding on the right */
+			}
+		</style>
 		
 		<!-- chart library -->
 		<script
@@ -202,6 +209,68 @@
 
 		</script>
 
+		<!-- Pagination for Tables-->
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const rowsPerPageSelect = document.getElementById('rows-per-page');
+				const prevPageButton = document.getElementById('prev-page');
+				const nextPageButton = document.getElementById('next-page');
+				const tableInfo = document.getElementById('table-info');
+				const table = document.querySelector('table'); // Replace with your specific table selector
+				let currentPage = 1;
+				let rowsPerPage = parseInt(rowsPerPageSelect.value);
+
+				function updateTable() {
+					const allRows = table.querySelectorAll('tbody tr');
+					const totalRows = allRows.length;
+					const startRow = (currentPage - 1) * rowsPerPage;
+					const endRow = startRow + rowsPerPage;
+					const maxPage = Math.ceil(totalRows / rowsPerPage);
+
+					// Hide all rows
+					allRows.forEach(row => row.style.display = 'none');
+
+					// Show only rows for current page
+					for (let i = startRow; i < endRow && i < totalRows; i++) {
+						allRows[i].style.display = '';
+					}
+
+					// Update info text
+					tableInfo.textContent = `${startRow + 1}–${Math.min(endRow, totalRows)} of ${totalRows}`;
+
+					// Enable/disable buttons
+					prevPageButton.disabled = currentPage === 1;
+					nextPageButton.disabled = currentPage === maxPage;
+				}
+
+				// Event listeners
+				rowsPerPageSelect.addEventListener('change', function() {
+					rowsPerPage = parseInt(this.value);
+					currentPage = 1; // Reset to first page
+					updateTable();
+				});
+
+				prevPageButton.addEventListener('click', function() {
+					if (currentPage > 1) {
+						currentPage--;
+						updateTable();
+					}
+				});
+
+				nextPageButton.addEventListener('click', function() {
+					const totalRows = table.querySelectorAll('tbody tr').length;
+					if (currentPage < Math.ceil(totalRows / rowsPerPage)) {
+						currentPage++;
+						updateTable();
+					}
+				});
+
+				// Initial table update
+				updateTable();
+			});
+
+		</script>
+		<!-- /Pagination for Tables-->
 
 	</head>
 
@@ -411,7 +480,21 @@
 							</tr>
 						</tbody>
 					</table>
+		
 				</div>
+	
+					<div id="table-pagination">
+						<span id="row-info">Rows per page:</span>
+						<select class="btn btn-sm id="rows-per-page">
+							<option value="5">5</option>
+							<option value="10">10</option>
+							<option value="25">25</option>
+						</select>
+						<span id="table-info"></span>
+						<button class="btn btn-sm id="prev-page">&lt;</button>
+						<button class="btn btn-sm id="next-page">&gt;</button>
+					</div>
+				
 			</section>
 			<!-- /card -->
 
