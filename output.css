@@ -76,6 +76,8 @@
 
 .anchor-target {
     display: none;
+    padding-top: 100px; /* Height of your fixed header */
+    margin-top: -100px; /* Negative value of the above padding */
 }
 
 #dashboardSection {
