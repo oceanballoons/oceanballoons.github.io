@@ -38,24 +38,25 @@
 
 .tooltip {
     visibility: hidden;
-    min-width: 200px;
-    background-color: black;
+    width: 200px;
+    background-color: rgb(30, 30, 30);
     color: white;
     text-align: center;
     border-radius: 6px;
-    padding: 5px;
+    padding: 5px 0;
     position: absolute;
     z-index: 1;
     top: 100%;
-    right: 0; /* Align to the left of the icon */
+    right: 0;
+    margin-left: -60px;
+    /* Adjusts the position of the tooltip */
 
     /* Fade in tooltip - animation */
     opacity: 0;
     transition: opacity 0.3s;
 }
 
-.info-container:hover .tooltip,
-.info-container:focus-within .tooltip {
+.info-container:hover .tooltip {
     visibility: visible;
     opacity: 1;
 }
