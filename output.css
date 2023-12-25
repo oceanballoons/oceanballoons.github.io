@@ -71,3 +71,14 @@
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+/* hide all sections by default except for dashboardSection */
+
+.anchor-target {
+    display: none;
+}
+
+#dashboardSection {
+    display: grid; /* or 'flex', depending on your layout needs */
+    gap: 12px; /* Adjust the gap as needed */
+}

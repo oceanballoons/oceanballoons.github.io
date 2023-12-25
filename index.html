@@ -174,13 +174,17 @@
 
 		<script>
 			function showSection(sectionId) {
-				// Hide all sections
-				document.querySelectorAll('.grid').forEach(section => {
+				// Hide all sections first
+				const sections = document.querySelectorAll('.anchor-target');
+				sections.forEach(section => {
 					section.style.display = 'none';
 				});
 
 				// Show the selected section
-				document.getElementById(sectionId).style.display = 'grid';
+				const selectedSection = document.getElementById(sectionId);
+				if (selectedSection) {
+					selectedSection.style.display = 'block';
+				}
 
 				// Remove active class from all menu items
 				document.querySelectorAll('.menu a').forEach(item => {
@@ -410,11 +414,11 @@
 			<!-- /header -->
 
 
-			<!-- NavSection - Dashboard Section-->
+			<!-- NavSection: Dashboard - Subsection: Summary-->
 			<div id="dashboardSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target">
 				<div class="col-span-12 lg:col-span-6"> <!-- Adjust col-span as needed -->
 					<h2 class="text-xl font-bold">
-						<span style="color: grey;">Demo Workspace ></span> Dashboard
+						<span style="color: grey;">Demo Workspace ></span> Dashboard > Summary
 					</h2>
 				</div>
 			
@@ -1313,11 +1317,11 @@
 				<!-- /card -->
 			</div>
 
-			<!-- NavSection - Analytics-->
+			<!-- NavSection: Analytics-->
 			<div id="usersSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target">
 				<div class="col-span-12 lg:col-span-6"> <!-- Adjust col-span as needed -->
 					<h2 class="text-xl font-bold">
-						<span style="color: grey;">Demo Workspace ></span> Users
+						<span style="color: grey;">Demo Workspace ></span> Analytics + Reports
 					</h2>
 				</div>
 
@@ -1415,10 +1419,7 @@
 					</div>
 				</section>
 				<!-- /card -->
-
-
-
-			
+						
 
 
 			<!-- NavSection - Analytics-->
@@ -1664,10 +1665,9 @@
 								</div>
 							</summary>
 							<ul>
-								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">All Dashboards</a></li>
-								<li><a>Summary</a></li>
-								<li><a>Activity Feed</a></li>
-								<li><a>Compliance Status</a></li>
+								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Summary</a></li>
+								<li><a href="#activityfeedSection" id="activityfeedLink" onclick="showSection('activityfeedSection', event)">Activity Feed</a></li>
+								<li><a href="#compliancestatusSection" id="compliancestatusLink" onclick="showSection('compliancestatusSection', event)">Compliance Status</a></li>
 							</ul>
 						</details>
 					</li>			
