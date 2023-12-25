@@ -61,13 +61,13 @@
     opacity: 1;
 }
 
-#table-pagination {
+.table-pagination {
     display: flex;
     align-items: center;
     margin-top: 10px;
 }
 
-#table-pagination button:disabled {
+.table-pagination button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
