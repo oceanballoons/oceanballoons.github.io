@@ -59,15 +59,33 @@
 				font-size: 16px
 			}
 
-		/*-- Radio Buttons */
-			.square-radio {
-				width: 15px;
-				height: 15px;
-				border-radius: 5px; /* Rounded corners */
-			}
+		/* Checkboxes */			
+		.ascii-checkbox {
+			appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			background-color: #fff;
+			border: 2px solid #38A169; /* Green border */
+			padding: 10px;
+			border-radius: 10px; /* Rounded corners */
+			display: inline-block;
+			position: relative;
+		}
 
-		/*-- /Radio Buttons */
-			
+		.ascii-checkbox:checked {
+			background-color: #38A169; /* Green background for checked state */
+		}
+
+		.ascii-checkbox:checked:after {
+			content: '✔'; /* ASCII checkmark */
+			color: white;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 16px; /* Larger checkmark */
+		}
+		/* /Checkboxes */
 		
 		.action-link {
 				text-decoration: none;
@@ -384,7 +402,7 @@
 						<tbody>
 							<!-- Data Row -->								
 							<tr style="background-color: #cef2d9;">
-								<td><input type="radio" class="square-radio" /></td>
+								<td><input type="checkbox" class="ascii-checkbox" /></td>
 								<td style="padding: 0.5rem;">
 								  <span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #38A169; border-radius: 9999px; font-weight: bold;">COMPLETE</span>
 								</td>
@@ -395,9 +413,7 @@
 								<td style="padding: 0.5rem; font-weight: 650;">Daily</td>
 							</tr>
 							<tr style="background-color: #f0e4cb;">
-								<td>
-									<input type="radio" class="square-radio" />
-								</td>
+								<td><input type="checkbox" class="ascii-checkbox" /></td>
 								<td style="padding: 0.5rem;">
 									<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #D69E2E; border-radius: 9999px; font-weight: bold;">PRIORITY</span>
 									
@@ -408,9 +424,7 @@
 								<td style="padding: 0.5rem; font-weight: 650;">Weekly</td>
 							</tr>
 							<tr style="background-color: #eac2c2;">
-								<td>
-									<input type="radio" class="square-radio" />
-								</td>
+								<td><input type="checkbox" class="ascii-checkbox" /></td>
 								<td style="padding: 0.5rem;">
 									<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #C53030; border-radius: 9999px; font-weight: bold;">URGENT</span>
 								</td>
@@ -420,9 +434,7 @@
 								<td style="padding: 0.5rem; font-weight: 650;">Monthly</td>
 							</tr>
 							<tr style="background-color: #b8cee3;">
-								<td>
-									<input type="radio" class="square-radio" />
-								</td>
+								<td><input type="checkbox" class="ascii-checkbox" /></td>
 								<td style="padding: 0.5rem;">
 									<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #3182CE; border-radius: 9999px; font-weight: bold;">AD HOC</span>
 								</td>
@@ -1296,7 +1308,7 @@
 							<tbody>
 								<!-- Data Row -->								
 								<tr style="background-color: #cef2d9;">
-									<td><input type="radio" class="square-radio" /></td>
+									<td><input type="checkbox" class="ascii-checkbox" /></td>
 									<td style="padding: 0.5rem;">
 									  <span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #38A169; border-radius: 9999px; font-weight: bold;">COMPLETE</span>
 									</td>
@@ -1312,9 +1324,7 @@
 									</td>
 								  </tr>
 								<tr style="background-color: #f0e4cb;">
-									<td>
-										<input type="radio" class="square-radio" />
-									</td>
+									<td><input type="checkbox" class="ascii-checkbox" /></td>
 									<td style="padding: 0.5rem;">
 										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #D69E2E; border-radius: 9999px; font-weight: bold;">PRIORITY</span>
 										
@@ -1330,9 +1340,7 @@
 									</td>
 								</tr>
 								<tr style="background-color: #eac2c2;">
-									<td>
-										<input type="radio" class="square-radio" />
-									</td>
+									<td><input type="checkbox" class="ascii-checkbox" /></td>
 									<td style="padding: 0.5rem;">
 										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #C53030; border-radius: 9999px; font-weight: bold;">URGENT</span>
 									</td>
@@ -1347,9 +1355,7 @@
 									</td>
 								</tr>
 								<tr style="background-color: #b8cee3;">
-									<td>
-										<input type="radio" class="square-radio" />
-									</td>
+									<td><input type="checkbox" class="ascii-checkbox" /></td>
 									<td style="padding: 0.5rem;">
 										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #3182CE; border-radius: 9999px; font-weight: bold;">AD HOC</span>
 									</td>
