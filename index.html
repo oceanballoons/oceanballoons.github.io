@@ -183,7 +183,7 @@
 				// Show the selected section
 				const selectedSection = document.getElementById(sectionId);
 				if (selectedSection) {
-					selectedSection.style.display = 'block';
+					selectedSection.style.display = 'grid';
 				}
 
 				// Remove active class from all menu items
@@ -423,7 +423,7 @@
 				</div>
 			
 			<!-- card -->
-			<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm">
+			<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm gap-y-12">
 				<div class="card-body grow-0">
 					<h2 class="card-title">
 						<a class="link-hover link">Current Checklists</a>
@@ -538,7 +538,7 @@
 							<td style="padding: 0.5rem;">
 								<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #38A169; border-radius: 9999px; font-weight: bold;">TEST</span>
 							</td>
-							<td style="padding: 0.5rem;">Cy Gandertontd>
+							<td style="padding: 0.5rem;">Cy Ganderton
 							<td style="padding: 0.5rem;">Feb 2nd</td>
 							<td style="padding: 0.5rem;">
 								<svg data-src="https://unpkg.com/heroicons/20/solid/calculator.svg" class="inline-block h-5 w-5"></svg>
@@ -550,7 +550,7 @@
 							<td style="padding: 0.5rem;">
 								<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #3182CE; border-radius: 9999px; font-weight: bold;">TEST</span>
 							</td>
-							<td style="padding: 0.5rem;">Cy Gandertontd>
+							<td style="padding: 0.5rem;">Cy Ganderton
 							<td style="padding: 0.5rem;">Feb 2nd</td>
 							<td style="padding: 0.5rem;">
 								<svg data-src="https://unpkg.com/heroicons/20/solid/bell.svg" class="inline-block h-5 w-5"></svg>
@@ -1318,7 +1318,7 @@
 
 
 			<!-- NavSection: Dashboard - Subsection: Activity Feed-->
-			<div id="activityfeedSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target">
+			<div id="dashboardactivityfeedSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target">
 				<div class="col-span-12 lg:col-span-6"> <!-- Adjust col-span as needed -->
 					<h2 class="text-xl font-bold">
 						<span style="color: grey;">Demo Workspace ></span> Dashboard > Activity Feed
@@ -1326,6 +1326,7 @@
 				</div>
 			
 			<!-- card -->
+			<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm">
 			<div class="overflow-x-auto">
 				<table class="table table-xs">
 				  <thead>
@@ -1504,200 +1505,86 @@
 				  </tfoot>
 				</table>
 			  </div>
-			<!-- /card -->
-
-			<!-- card -->
-			<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm">
-				<div class="card-body grow-0">
-					<h2 class="card-title">
-						<a class="link-hover link">Current Checklists</a>
-					</h2>
-				</div>
-				<div class="overflow-x-auto">
-				
-					<table class="table table-zebra force-black-text">
-						<thead class="force-black-text">
-							<tr style="background-color: #E2E8F0;">
-								<th style="padding: 0.5rem;">Select</th>
-								<th style="padding: 0.5rem;">Status</th>
-								<th style="padding: 0.5rem;" colspan="1">Form Name</th>
-								<th style="padding: 0.5rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-								<th style="padding: 0.5rem;">Facility</th>
-								<td style="padding: 0.5rem;">Room</td>
-								<td style="padding: 0.5rem;">Frequency</td>
-							</tr>
-						</thead>
-						<tbody>
-							<!-- Data Row -->								
-							<tr style="background-color: #cef2d9;">
-								<td class="w-0"><input type="checkbox" class="checkbox" /></td>								<td style="padding: 0.5rem;">
-								  <span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #38A169; border-radius: 9999px; font-weight: bold;">COMPLETE</span>
-								</td>
-								<td style="padding: 0.5rem;" colspan="2">X-ray Room Check + Inventory</td>
-								<!-- Remove one of the other data cells to keep the total count consistent -->
-								<td style="padding: 0.5rem;"><a class="link-hover link">Foothills</a></td>
-								<td style="padding: 0.5rem;"><a class="link-hover link">X01</a></td>
-								<td style="padding: 0.5rem; font-weight: 650;">Daily</td>
-							</tr>
-							<tr style="background-color: #f0e4cb;">
-								<td class="w-0"><input type="checkbox" class="checkbox" /></td>								<td style="padding: 0.5rem;">
-									<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #D69E2E; border-radius: 9999px; font-weight: bold;">PRIORITY</span>
-									
-								</td>
-								<td style="padding: 0.5rem;" colspan="2">Ultrasound Facility Check</td>
-								<td style="padding: 0.5rem;"><a class="link-hover link">Foothills</a></td>
-								<td style="padding: 0.5rem;"><a class="link-hover link">U02</a></td>								<td style="padding: 0.5rem; font-weight: 650;">Weekly</td>
-							</tr>
-							<tr style="background-color: #eac2c2;">
-								<td class="w-0"><input type="checkbox" class="checkbox" /></td>								<td style="padding: 0.5rem;">
-									<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #C53030; border-radius: 9999px; font-weight: bold;">URGENT</span>
-								</td>
-								<td style="padding: 0.5rem;" colspan="2">Facility Safety Review</td>
-								<td style="padding: 0.5rem;"><a class="link-hover link">Peter Lougheed</a></td>
-								<td style="padding: 0.5rem;"><a class="link-hover link">Emergency</a></td>
-								<td style="padding: 0.5rem; font-weight: 650;">Monthly</td>
-							</tr>
-							<tr style="background-color: #b8cee3;">
-								<td class="w-0"><input type="checkbox" class="checkbox" /></td>								<td style="padding: 0.5rem;">
-									<span style="display: inline-block; padding: 0.1rem 0.75rem; color: white; background-color: #3182CE; border-radius: 9999px; font-weight: bold;">AD HOC</span>
-								</td>
-								<td style="padding: 0.5rem;" colspan="2">Ultrasound Probe Disinfection</td>
-								<td style="padding: 0.5rem;"><a class="link-hover link">Rockyview Hospital</a></td>
-								<td style="padding: 0.5rem;"><a class="link-hover link">Reprocessing</a></td>
-								<td style="padding: 0.5rem; font-weight: 650;">Ad Hoc</td>
-							</tr>
-						</tbody>
-					</table>
+			  <div id="table-pagination">
+				<span id="row-info">Rows per page:</span>
+				<select class="btn btn-sm" id="rows-per-page">
+					<option value="10">10</option>
+					<option value="25">25</option>
+					<option value="100">100</option>
+				</select>
+				<span id="table-info"></span>
+				<button class="btn btn-sm" id="prev-page">&lt;</button>
+				<button class="btn btn-sm" id="next-page">&gt;</button>
+			</div>
+			Alfred: Please note pagination doesn't work outside of the first table.
 		
-				</div>
-	
-					<div id="table-pagination">
-						<span id="row-info">Rows per page:</span>
-						<select class="btn btn-sm id="rows-per-page">
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="5">5</option>
-						</select>
-						<span id="table-info"></span>
-						<button class="btn btn-sm id="prev-page">&lt;</button>
-						<button class="btn btn-sm id="next-page">&gt;</button>
-					</div>
-				
 			</section>
+			</div>
 			<!-- /card -->
-			
-			
+		
+		
 
-			<!-- NavSection: Analytics-->
-			<div id="usersSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target">
+			
+			<!-- NavSection: Dashboard - Subsection: Compliance Status -->
+			<div id="dashboardcompliancestatusSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target">
 				<div class="col-span-12 lg:col-span-6"> <!-- Adjust col-span as needed -->
 					<h2 class="text-xl font-bold">
-						<span style="color: grey;">Demo Workspace ></span> Analytics + Reports
+						<span style="color: grey;">Demo Workspace ></span> Dashboard > Compliance Status
 					</h2>
 				</div>
-
-				<!-- card -->
-				<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm">
-					<div class="card-body grow-0">
-						<div class="flex justify-between gap-2">
-							<h2 class="card-title grow">
-								<a class="link-hover link">Recent Checklists</a>
-							</h2>
-							<button class="btn btn-sm">Add</button>
-							<button class="btn btn-sm">Edit</button>
-							<button class="btn btn-sm">Delete</button>
+			
+			<!-- card -->
+			<h2 class="card-title">
+				<a class="link-hover link">Transactions</a>
+			</h2>
+			<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm">
+				<div class="stats shadow">
+					<div class="stat">
+					  <div class="stat-figure text-primary">
+						<svg data-src="https://unpkg.com/heroicons/20/solid/document-check.svg" class="inline-block h-10 w-10"></svg>
+					</div>
+					  <div class="stat-title"># Checklists this year</div>
+					  <div class="stat-value text-primary">25</div>
+					  <div class="stat-desc">21% more than last month</div>
+					</div>
+					
+					<div class="stat">
+					  <div class="stat-figure text-secondary">
+						<svg data-src="https://unpkg.com/heroicons/20/solid/clock.svg" class="inline-block h-10 w-10"></svg>
+					</div>
+					  <div class="stat-title">Time to Compliance</div>
+					  <div class="stat-value text-secondary">2.8 days</div>
+					  <div class="stat-desc">11% slower than last month</div>
+					</div>
+					
+					<div class="stat">
+					  <div class="stat-figure text-secondary">
+						<div class="avatar online">
+						  <div class="w-12 rounded-full">
+							<img src="https://picsum.photos/80/80?5" />
+						  </div>
 						</div>
+					  </div>
+					  <div class="stat-value">100%</div>
+					  <div class="stat-title">Compliance Rate</div>
+					  <div class="stat-desc text-secondary">6 tasks remaining this month</div>
 					</div>
-					<div class="overflow-x-auto">
-						<table class="table table-zebra force-black-text">
-							<thead class="force-black-text">
-								<tr style="background-color: #E2E8F0;">
-									<th style="padding: 0.5rem;">Seleaact</th>
-									<th style="padding: 0.5rem;">Status</th>
-									<th style="padding: 0.5rem;" colspan="1">Form Name</th>
-									<th style="padding: 0.5rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-									<th style="padding: 0.5rem;">Region</th>
-									<th style="padding: 0.5rem;">Facility</th>
-									<th style="padding: 0.5rem;">Department</th>
-									<td style="padding: 0.5rem;">Room</td>
-									<td style="padding: 0.5rem;">Frequency</td>
-									<th style="padding: 0.5rem;">Submissions</th>
-								</tr>
-							</thead>
-							<tbody>
-								<!-- Data Row -->								
-								<tr style="background-color: #cef2d9;">
-									<td class="w-0"><input type="checkbox" class="checkbox" /></td>									<td style="padding: 0.5rem;">
-									  <span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #38A169; border-radius: 9999px; font-weight: bold;">COMPLETE</span>
-									</td>
-									<td style="padding: 0.5rem;" colspan="2">X-ray Room Check + Inventory</td>
-									<!-- Remove one of the other data cells to keep the total count consistent -->
-									<td style="padding: 0.5rem;">Calgary North</td>
-									<td style="padding: 0.5rem;">Foothills</td>
-									<td style="padding: 0.5rem;">X-ray</td>
-									<td style="padding: 0.5rem;">X01</td>
-									<td style="padding: 0.5rem; font-weight: 650;">Daily</td>
-									<td>
-									  <a href="#" class="action-link" title="Show Previous Submissions">...</a>
-									</td>
-								  </tr>
-								<tr style="background-color: #f0e4cb;">
-									<td class="w-0"><input type="checkbox" class="checkbox" /></td>									<td style="padding: 0.5rem;">
-										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #D69E2E; border-radius: 9999px; font-weight: bold;">PRIORITY</span>
-										
-									</td>
-									<td style="padding: 0.5rem;" colspan="2">Ultrasound Facility Check</td>
-									<td style="padding: 0.5rem;">Calgary North</td>
-									<td style="padding: 0.5rem;">Foothills</td>
-									<td style="padding: 0.5rem;">Ultrasound</td>
-									<td style="padding: 0.5rem;">U02</td>
-									<td style="padding: 0.5rem; font-weight: 650;">Weekly</td>
-									<td>
-										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
-									</td>
-								</tr>
-								<tr style="background-color: #eac2c2;">
-									<td class="w-0"><input type="checkbox" class="checkbox" /></td>									<td style="padding: 0.5rem;">
-										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #C53030; border-radius: 9999px; font-weight: bold;">URGENT</span>
-									</td>
-									<td style="padding: 0.5rem;" colspan="2">Facility Safety Review</td>
-									<td style="padding: 0.5rem;">Calgary North</td>
-									<td style="padding: 0.5rem;">Peter Lougheed</td>
-									<td style="padding: 0.5rem;">Emergency Department</td>
-									<td style="padding: 0.5rem;">Emergency</td>
-									<td style="padding: 0.5rem; font-weight: 650;">Monthly</td>
-									<td>
-										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
-									</td>
-								</tr>
-								<tr style="background-color: #b8cee3;">
-									<td class="w-0"><input type="checkbox" class="checkbox" /></td>									<td style="padding: 0.5rem;">
-										<span style="display: inline-block; padding: 0.25rem 0.75rem; color: white; background-color: #3182CE; border-radius: 9999px; font-weight: bold;">AD HOC</span>
-									</td>
-									<td style="padding: 0.5rem;" colspan="2">Ultrasound Probe Disinfection</td>
-									<td style="padding: 0.5rem;">Calgary South</td>
-									<td style="padding: 0.5rem;">Rockyview Hospital</td>
-									<td style="padding: 0.5rem;">Ultrasound</td>
-									<td style="padding: 0.5rem;">Reprocessing</td>
-									<td style="padding: 0.5rem; font-weight: 650;">Ad Hoc</td>
-									<td>
-										<a href="#" class="action-link" title="Show Previous Submissions">...</a>
-									</td>
-								</tr>
-																<!-- Repeat for other rows as needed -->
-							</tbody>
-						</table>
-					</div>
-				</section>
-				<!-- /card -->
+					
+				  </div>
+		</section>
+		</div>
+		<!-- /card -->			
+		
+
+
 						
 
 
-			<!-- NavSection - Analytics-->
-			<div id="usersSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target">
+			<!-- NavSection: Checklists - Subsection: Create/Manage -->
+			<div id="checklistscreatemanageSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target">
 				<div class="col-span-12 lg:col-span-6"> <!-- Adjust col-span as needed -->
 					<h2 class="text-xl font-bold">
-						<span style="color: grey;">Demo Workspace ></span> Users
+						<span style="color: grey;">Demo Workspace ></span> Checklists > Create/Manage
 					</h2>
 				</div>
 
@@ -1794,14 +1681,24 @@
 						</table>
 					</div>
 				</section>
+				</div>
 				<!-- /card -->
 
+
+
+			<!-- NavSection: Checklists - Subsection: Checklist Assignment -->
+			<div id="checklistschecklistassignmentSection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target">
+				<div class="col-span-12 lg:col-span-6"> <!-- Adjust col-span as needed -->
+					<h2 class="text-xl font-bold">
+						<span style="color: grey;">Demo Workspace ></span> Checklists > Checklist Assignment
+					</h2>
+				</div>
 
 				<!-- card -->
 				<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm">
 					<div class="card-body grow-0">
 						<h2 class="card-title">
-							<a class="link-hover link">Transactions</a>
+							<a class="link-hover link">Checklist Assignment</a>
 						</h2>
 					</div>
 					<div class="overflow-x-auto">
@@ -1873,20 +1770,85 @@
 				<!-- /card -->
 
 
+			<!-- card -->
+			<section class="card col-span-12 bg-primary text-primary-content shadow-sm xl:col-span-6">
+				<div class="card-body pb-0">
+					<h2 class="card-title">21,500 USD</h2>
+					<a class="link-hover link text-xs">Revenue report →</a>
+				</div>
+				<tc-column
+					class="h-full w-full p-4 pt-0 [--shape-color:oklch(var(--pc))]"
+					values="[12,10,12,4,13,16,14,10,12,11,17,18,16,17,20,14,15,13,12,14]"
+					min="0"
+					shape-radius="4"
+					shape-gap="4"></tc-column>
+			</section>
+			</div>
+			<!-- /card -->
+
+
+
+			<!-- NavSection: Checklists - Subsection: Checklist Assignment -->
+			<div id="checklistschecklisthistorySection" class="grid grid-cols-12 grid-rows-[min-content] gap-y-12 p-4 lg:gap-x-12 lg:p-10 anchor-target">
+				<div class="col-span-12 lg:col-span-6"> <!-- Adjust col-span as needed -->
+					<h2 class="text-xl font-bold">
+						<span style="color: grey;">Demo Workspace ></span> Checklists > Checklist History
+					</h2>
+				</div>
+
 				<!-- card -->
-				<section class="card col-span-12 bg-primary text-primary-content shadow-sm xl:col-span-6">
-					<div class="card-body pb-0">
-						<h2 class="card-title">21,500 USD</h2>
-						<a class="link-hover link text-xs">Revenue report →</a>
+				<section class="card col-span-12 overflow-hidden bg-base-100 shadow-sm">
+					<div class="card-body grow-0">
+						<h2 class="card-title">
+							<a class="link-hover link">Checklist History</a>
+						</h2>
 					</div>
-					<tc-column
-						class="h-full w-full p-4 pt-0 [--shape-color:oklch(var(--pc))]"
-						values="[12,10,12,4,13,16,14,10,12,11,17,18,16,17,20,14,15,13,12,14]"
-						min="0"
-						shape-radius="4"
-						shape-gap="4"></tc-column>
+					<div class="overflow-x-auto">
+						<table class="table">
+						  <!-- head -->
+						  <thead>
+							<tr>
+							  <th></th>
+							  <th>Name</th>
+							  <th>Job</th>
+							  <th>Favorite Color</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<!-- row 1 -->
+							<tr class="bg-base-200">
+							  <th>1</th>
+							  <td>Cy Ganderton</td>
+							  <td>Quality Control Specialist</td>
+							  <td>Blue</td>
+							</tr>
+							<!-- row 2 -->
+							<tr>
+							  <th>2</th>
+							  <td>Hart Hagerty</td>
+							  <td>Desktop Support Technician</td>
+							  <td>Purple</td>
+							</tr>
+							<!-- row 3 -->
+							<tr>
+							  <th>3</th>
+							  <td>Brice Swyre</td>
+							  <td>Tax Accountant</td>
+							  <td>Red</td>
+							</tr>
+						  </tbody>
+						</table>
+					  </div>
 				</section>
+				</div>
+				
 				<!-- /card -->
+
+
+
+
+
+
 						
 			</div>
 		<!-- Footer Section -->
@@ -1937,8 +1899,8 @@
 							</summary>
 							<ul>
 								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Summary</a></li>
-								<li><a href="#activityfeedSection" id="activityfeedLink" onclick="showSection('activityfeedSection', event)">Activity Feed</a></li>
-								<li><a href="#compliancestatusSection" id="compliancestatusLink" onclick="showSection('compliancestatusSection', event)">Compliance Status</a></li>
+								<li><a href="#dashboardactivityfeedSection" id="dashboardactivityfeedLink" onclick="showSection('dashboardactivityfeedSection', event)">Activity Feed</a></li>
+								<li><a href="#dashboardcompliancestatusSection" id="dashboardcompliancestatusLink" onclick="showSection('dashboardcompliancestatusSection', event)">Compliance Status</a></li>
 							</ul>
 						</details>
 					</li>			
@@ -1956,9 +1918,9 @@
 								</div>
 							</summary>
 							<ul>
-								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Create/Manage</a></li>
-								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Checklist Assignment</a></li>
-								<li><a href="#dashboardSection" id="dashboardLink" onclick="showSection('dashboardSection', event)">Checklist History</a></li>
+								<li><a href="#checklistscreatemanageSection" id="checklistscreatemanageLink" onclick="showSection('checklistscreatemanageSection', event)">Create/Manage</a></li>
+								<li><a href="#checklistschecklistassignmentSection" id="checklistschecklistassignmentLink" onclick="showSection('checklistschecklistassignmentSection', event)">Checklist Assignment</a></li>
+								<li><a href="#checklistschecklisthistorySection" id="checklistschecklisthistoryLink" onclick="showSection('checklistschecklisthistorySection', event)">Checklist History</a></li>
 							</ul>
 						</details>
 					</li>			
